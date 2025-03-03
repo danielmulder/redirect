@@ -1,0 +1,31 @@
+/* Zorg voor voldoende ruimte onder de navbar */
+body {
+    padding-top: 100px;
+}
+
+/* Navbar logo grootte */
+.navbar-brand img {
+    max-height: 48px;
+    max-width: 48px;
+}
+
+/* Verwijder inline margin-bottom van page-header */
+#banner {
+    margin-bottom: 28px;
+}
+
+/* Verbeter de afstand tussen alinea's */
+.text-dark {
+    margin-bottom: 16px;
+}
+
+/* Footer styling */
+#footer {
+    margin-top: 5rem !important;
+}
+.py-3 {
+    padding-bottom: 0.5rem !important;
+}
+.pt-5 {
+    padding-top: 1rem !important;
+}
