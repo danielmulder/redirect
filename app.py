@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, Response
+from flask import Flask, render_template, redirect, request, send_from_directory
 
 app = Flask(__name__)
 
@@ -16,18 +16,24 @@ def add_security_headers(response):
     response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self'; style-src 'self'"
     return response
 
-
 @app.route('/')
 def home():
     return render_template("index.html")
 
+@app.route('/robots.txt')
+def robots():
+    """Serveert robots.txt als statisch bestand"""
+    return send_from_directory('static', 'robots.txt')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    """Serveert sitemap.xml als statisch bestand"""
+    return send_from_directory('static', 'sitemap.xml')
+
 @app.route('/<path:path>')
 def catch_all(path):
-    # Controleer of de aanvraag van gpt.proseo.tech komt
     if request.host == "gpt.proseo.tech":
         return redirect("https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant", code=301)
-
-    # Alle andere domeinen blijven zoals ze zijn (zoals app.proseo.tech)
     return "This is the Shark App", 200
 
 if __name__ == "__main__":
