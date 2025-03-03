@@ -1,46 +1,24 @@
 import os
-import base64
-import secrets
-from flask import Flask, render_template, request, Response, redirect, g
+from flask import Flask, render_template, redirect, request, Response
 
 app = Flask(__name__)
 
-def generate_nonce():
-    """Genereert een veilige, willekeurige nonce."""
-    return base64.b64encode(secrets.token_bytes(16)).decode('utf-8')
-
-
-@app.before_request
-def set_nonce():
-    """Slaat de nonce op in Flask's request context (`g`)."""
-    g.nonce = generate_nonce()
-
-
 @app.after_request
-def add_security_headers(response: Response):
-    """Voegt security headers met nonce toe aan elke response."""
-    csp_policy = (
-        f"default-src 'self'; "
-        f"script-src 'self' 'nonce-{g.nonce}'; "
-        f"style-src 'self' 'nonce-{g.nonce}'; "
-        f"img-src 'self' data:; "
-        f"frame-ancestors 'none'; "
-        f"base-uri 'self'; "
-    )
-    response.headers["Content-Security-Policy"] = csp_policy
+def add_security_headers(response):
+    """Voegt security HTTP headers toe aan elke response"""
     response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["Permissions-Policy"] = "geolocation=(), microphone=()"
+    response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
     return response
 
 
 @app.route('/')
 def home():
-    """Rendert index.html en voegt nonce toe aan de template."""
-    return render_template("index.html", nonce=g.nonce)
-
+    return render_template("index.html")
 
 @app.route('/<path:path>')
 def catch_all(path):
@@ -50,7 +28,6 @@ def catch_all(path):
 
     # Alle andere domeinen blijven zoals ze zijn (zoals app.proseo.tech)
     return "This is the Shark App", 200
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))

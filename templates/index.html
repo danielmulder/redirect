@@ -27,17 +27,55 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
+    <!-- ✅ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pro SEO Assistant",
+      "operatingSystem": "Web",
+      "applicationCategory": "AI SEO Tool",
+      "url": "https://proseo.tech/",
+      "image": "https://proseo.tech/static/images/logo.svg",
+      "description": "Pro SEO Assistant AI is an API-driven AI SEO tool for on-page audits and content optimization with live accurate data and actionable reports.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pro SEO Tech",
+        "url": "https://proseo.tech/"
+      },
+      "sameAs": [
+        "https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
+      ],
+      "softwareVersion": "1.0",
+      "applicationSubCategory": "Web-based SEO Analysis",
+      "creator": {
+        "@type": "Person",
+        "name": "Daniël Mulder",
+        "sameAs": "https://www.linkedin.com/in/danielmulder1979/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "",
+        "ratingCount": ""
+      }
+    }
+    </script>
+
     <!-- ✅ Stylesheets -->
-    <link rel="stylesheet" href="static/css/bootstrap.css">
-    <link rel="stylesheet" href="static/css/style.css"> <!-- ✅ Nieuw CSS-bestand -->
+    <link media="all" rel="stylesheet" href="static/css/bootstrap.css" />
 </head>
-<body>
+<body style="padding-top: 100px;">
 
     <!-- ✅ Navbar -->
     <div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
         <div class="container">
             <a href="#" class="navbar-brand">
-                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pro SEO GPT - avatar logo">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pro SEO GPT - avatar logo" style="max-height: 48px; max-width: 48px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,17 +94,17 @@
 
     <!-- ✅ Content -->
     <div class="container pt-5">
-        <div class="page-header" id="banner">
+        <div class="page-header" id="banner" style="margin-bottom: 28px;">
             <h1>Pro SEO Assistant GPT</h1>
         </div>
 
         <div class="mt-5">
             <h2 class="h4 mb-3">Official Website - Pro SEO Assistant GPT</h2>
-            <p class="text-dark">
+            <p class="text-dark mb-4">
                 <strong>The Pro SEO Assistant GPT is an AI based ChatGPT SEO Tool built on a modular, scalable SEO API for ChatGPT.</strong>
                 It uses the SEO API as a microservice with a serverless architecture to service the connected ChatGPT SEO Assistants.
             </p>
-            <p class="text-dark">
+            <p class="mb-4">
                 The Pro SEO Assistant GPT offers a range of API-driven utilities for SEO audits, webpage and rankings analysis, text processing, and URL operations.
                 Each function operates independently, ensuring seamless scalability and high availability.
             </p>
@@ -92,7 +130,7 @@
     </div>
 
     <!-- ✅ Footer -->
-    <footer class="bg-light text-center py-3 mt-5" style="padding-top: 5rem !important;">
+    <footer class="bg-light text-center py-3 mt-5" style="margin-top: 5rem !important;">
         <p>&copy; 2024 Pro SEO Assistant. All rights reserved -
         <a href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant" target="_blank">Try Pro SEO Assistant</a></p>
     </footer>
