@@ -4,16 +4,17 @@ from flask import Flask, render_template, redirect, request, Response
 app = Flask(__name__)
 
 @app.after_request
-def add_security_headers(response: Response):
+def add_security_headers(response):
     """Voegt security HTTP headers toe aan elke response"""
-    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"  # Forceert HTTPS
-    response.headers["X-Content-Type-Options"] = "nosniff"  # Voorkomt MIME sniffing
-    response.headers["X-Frame-Options"] = "DENY"  # Voorkomt clickjacking via iframes
-    response.headers["X-XSS-Protection"] = "1; mode=block"  # XSS-bescherming
-    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"  # Referrer beperken
-    response.headers["Permissions-Policy"] = "geolocation=(), microphone=()"  # Beperkt browser permissies
-    response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"  # CSP tegen externe scripts
+    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Permissions-Policy"] = "geolocation=(), microphone=()"
+    response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
     return response
+
 
 @app.route('/')
 def home():
