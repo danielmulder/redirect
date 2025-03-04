@@ -3,19 +3,6 @@ from flask import Flask, render_template, redirect, request, send_from_directory
 
 app = Flask(__name__)
 
-@app.after_request
-def add_security_headers(response):
-    """Voegt security HTTP headers toe aan elke response"""
-    response.headers["Cache-Control"] = "public, max-age=31536000"
-    response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
-    response.headers["X-Frame-Options"] = "DENY"
-    response.headers["X-Content-Type-Options"] = "nosniff"
-    response.headers["X-XSS-Protection"] = "1; mode=block"
-    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
-    response.headers["Permissions-Policy"] = "geolocation=(), microphone=(), camera=(), fullscreen=()"
-    response.headers["Content-Security-Policy"] = "default-src 'self'; script-src 'self'; style-src 'self'"
-    return response
-
 @app.route('/')
 def home():
     return render_template("index.html")

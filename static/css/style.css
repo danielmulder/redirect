@@ -1,5 +1,5 @@
 /* Zorg voor voldoende ruimte onder de navbar */
-body {
+#_body {
     padding-top: 100px;
 }
 
@@ -7,6 +7,10 @@ body {
 .navbar-brand img {
     max-height: 48px;
     max-width: 48px;
+}
+
+h1 {
+    margin-top: 1rem;
 }
 
 /* Verwijder inline margin-bottom van page-header */
