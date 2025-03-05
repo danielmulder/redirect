@@ -10,6 +10,15 @@ p {
     color: #adafae !important;
 }
 
+.logo-text {
+    font-size: 20px;
+}
+
+.dropdown-menu .dropdown-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 /* Styling voor de lijst */
 .list-group {
     --bs-list-group-color: #fff !important;
@@ -94,6 +103,9 @@ p {
     .navbar-collapse {
         background: #0a74da;
         padding: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin-top: 10px;
         border-radius: 8px;
     }
 }
@@ -120,6 +132,11 @@ p {
 .text-block-section h2 img {
     height: 20px;
     margin-right: 8px;
+}
+
+.lead {
+    padding-top: 10px;
+    padding-bottom: 16px;
 }
 
 .text-block-section code {
