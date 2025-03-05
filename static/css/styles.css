@@ -1,14 +1,74 @@
-#_body {
+/* Body & general styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #060606;
+    color: #212529;
     margin-top: 64px;
 }
 
-/* Navbar Styling */
-.navbar-nav .nav-item {
-    padding: 0 12px;
+p {
+    color: #adafae !important;
 }
 
-h1 {
-    margin-top: 1rem;
+/* Styling voor de lijst */
+.list-group {
+    --bs-list-group-color: #fff !important;
+    --bs-list-group-bg: #222 !important;
+    --bs-list-group-border-color: #282828 !important;
+    --bs-list-group-border-width: var(--bs-border-width) !important;
+    --bs-list-group-border-radius: var(--bs-border-radius) !important;
+    --bs-list-group-item-padding-x: 1rem !important;
+    --bs-list-group-item-padding-y: 0.5rem !important;
+    --bs-list-group-action-color: #fff !important;
+    --bs-list-group-action-hover-color: var(--bs-emphasis-color) !important;
+    --bs-list-group-action-hover-bg: #2a9fd6 !important;
+    --bs-list-group-action-active-color: var(--bs-body-color) !important;
+    --bs-list-group-action-active-bg: #2a9fd6 !important;
+    --bs-list-group-disabled-color: var(--bs-secondary-color) !important;
+    --bs-list-group-disabled-bg: #282828 !important;
+    --bs-list-group-active-color: #fff !important;
+    --bs-list-group-active-bg: #2a9fd6 !important;
+    --bs-list-group-active-border-color: #2a9fd6 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding-left: 0 !important;
+    margin-bottom: 25px !important;
+    border-radius: var(--bs-list-group-border-radius) !important;
+}
+
+/* Specifieke styling voor de list items */
+.list-group-item {
+    background-color: #3d3c3c !important;
+    border: none !important; /* Verwijder de border */
+    color: white !important;
+    padding: 10px 15px 4px !important; /* Padding */
+    transition: background-color 0.3s ease !important;
+}
+
+.list-group-item:hover {
+    background-color: #222 !important;
+}
+
+.list-group-item::marker {
+    content: '\2705' !important; /* Groene vinkjes */
+    color: green !important;
+}
+
+.img-fluid {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff;
+    padding: 10px 0;
+}
+
+.navbar-nav .nav-item {
+    padding: 0 12px;
 }
 
 .navbar-nav .nav-link {
@@ -21,11 +81,11 @@ h1 {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #FFD700 !important; /* Goudkleur voor highlight */
-    border-bottom: 2px solid #FFD700; /* Onderstreping bij hover en actieve link */
+    /*color: #FFD700 !important;*/
+    border-bottom: 2px solid white;
 }
 
-/* Responsieve aanpassing voor mobiel */
+/* Responsive navbar adjustments */
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
@@ -38,9 +98,7 @@ h1 {
     }
 }
 
-.title {
-    color: green;
-}
+/* Text block section styling */
 .text-block-section {
     background: #1c1c1c;
     padding: 25px;
@@ -48,9 +106,9 @@ h1 {
     border: 1px solid #333;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
+    color: #ddd;
 }
 
-/* Styling voor de titel met een icoon */
 .text-block-section h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 10px;
@@ -61,43 +119,21 @@ h1 {
 
 .text-block-section h2 img {
     height: 20px;
-    margin-right: 8px; /* Zorgt voor ruimte tussen het icoon en de tekst */
+    margin-right: 8px;
 }
 
-/* Styling voor code-elementen */
 .text-block-section code {
     background: rgba(255, 255, 255, 0.1);
-    color: #4CAF50; /* Groene kleur in plaats van felroze */
+    color: #4CAF50;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 0.9em;
 }
 
-/* Betere spatiëring voor paragrafen */
 .text-block-section p {
-    color: #ddd;
+    color: white;
     line-height: 1.7;
     margin-bottom: 12px;
-}
-
-/* General styling for the page */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-}
-
-/* Navigation styling */
-.navbar {
-    background-color: #007bff;
-    padding: 10px 0;
-}
-.navbar .nav-link {
-    color: white;
-    font-weight: bold;
-}
-.navbar .nav-link:hover {
-    color: #f8f9fa;
 }
 
 /* Button styles */
@@ -107,6 +143,7 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
+
 .custom-btn:hover {
     background-color: #0056b3;
 }
@@ -129,21 +166,17 @@ body {
     background: #ffffff;
     transition: all 0.3s ease-in-out;
 }
+
 .list-group-item:hover {
     background: #f0f0f0;
 }
 
 /* Header styling */
-.header-title {
-    font-size: 24px;
+h1 {
+    font-size: 4rem;
     font-weight: bold;
+    margin-top: 2rem;
     margin-bottom: 16px;
-}
-
-/* Section paddings and margins */
-.section {
-    padding: 20px 0;
-    margin-bottom: 40px;
 }
 
 /* Table styles */
@@ -151,10 +184,12 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
 td, th {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
+
 th {
     background-color: #007bff;
     color: white;
@@ -163,7 +198,25 @@ th {
 /* Footer styling */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #343a40;
     color: white;
+}
+
+/* Logo styling */
+#logo_nav {
+    width: 48px !important; /* Toegevoegd: logo formaat aanpassen */
+    height: 48px !important; /* Toegevoegd: logo formaat aanpassen */
+    /* max-width: none !important; /* Toegevoegd: overschrijft inline style
+    max-height: none !important; /* Toegevoegd: overschrijft inline style */
+}
+
+/* Overige styles */
+.title {
+    color: green;
+}
+
+.section {
+    padding: 20px 0;
+    margin-bottom: 40px;
 }
