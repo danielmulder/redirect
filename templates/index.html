@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- ✅ SEO Titel en Meta Beschrijving -->
     <title>Pro SEO Assistant GPT | AI SEO Tool ChatGPT | Free SEO Tool</title>
     <meta name="description" content="Pro SEO Assistant GPT - Free AI SEO Tool for ChatGPT. API-driven SEO AI Tool for Page Audits. Content optimization with live accurate data & actionable reports.">
+
     <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://proseo.tech/">
+
     <!-- ✅ Meta Robots Tag -->
     <meta name="robots" content="index, follow">
+
     <!-- ✅ Open Graph Meta Tags -->
     <meta property="og:title" content="Pro SEO Assistant GPT | AI SEO Tool ChatGPT | Free SEO Tool">
     <meta property="og:description" content="Pro SEO Assistant GPT - Free AI SEO Tool for ChatGPT. API-driven SEO AI Tool for Page Audits. Content optimization with live accurate data & actionable reports.">
@@ -22,6 +26,7 @@
     <meta property="og:image:type" content="image/svg+xml">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+
     <!-- ✅ JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -60,263 +65,76 @@
       }
     }
     </script>
-    <!-- JS Scripts -->
-    <script src="https://proseo.tech/static/js/main.js"></script>
+
     <!-- ✅ Stylesheets -->
-    <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/bootstrap.css" />
-    <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/styles.css" />
+    <link media="all" rel="stylesheet" href="static/css/bootstrap.css" />
+    <link rel="stylesheet" href="static/css/style.css"> <!-- ✅ Nieuw CSS-bestand -->
 </head>
-<body id="_body">
+
+<body>
+
     <!-- ✅ Navbar -->
-    <nav id="sticky-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand" href="#"><img class="img-fluid" src="https://proseo.tech/static/images/logo.png"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a href="#" class="navbar-brand">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Pro SEO GPT - avatar logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#index">Index</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#page_auditor-onpage_audit">SEO Audits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#page_auditor-link_metrics">Link Metrics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tools-get_serp">SERP Analysis</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tools-is_index_google">Google Indexing Checker</a></li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold"
-                           href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
-                           target="_blank">
+                        <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold" href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant" target="_blank">
                             Use Pro SEO Assistant
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </div>
+
     <!-- ✅ Content -->
     <div class="container pt-5">
         <div class="page-header" id="banner">
             <h1>Pro SEO Assistant GPT</h1>
         </div>
+
         <div class="mt-5">
             <h2 class="h4 mb-3">Official Website - Pro SEO Assistant GPT</h2>
             <p class="text-dark">
-                <p>A <strong>specialized Gpt</strong>, available in the Gpt Store, that combines <strong>the power of ChatGpt + advanced Seo data</strong>. Through external integrations, this Gpt retrieves
-                reliable data, resulting in accurate analyses and immediately actionable reports.
+                <strong>The Pro SEO Assistant GPT is an AI based ChatGPT SEO Tool built on a modular, scalable SEO API for ChatGPT.</strong>
+                It uses the SEO API as a microservice with a serverless architecture to service the connected ChatGPT SEO Assistants.
             </p>
             <p class="text-dark">
-                <strong>Most AI tools on chatgpt.com generate estimates</strong>, but this Gpt retrieves <strong>factual data</strong> from web pages. This makes the analyses highly accurate, reliable,
-                and <strong>Provides insights that are deeper and often truly impressive.</strong>
+                The Pro SEO Assistant GPT offers a range of API-driven utilities for SEO audits, webpage and rankings analysis, text processing, and URL operations.
+                Each function operates independently, ensuring seamless scalability and high availability.
             </p>
         </div>
-        <a name="index"></a>
+
         <!-- ✅ SEO Audit Features -->
         <div class="mt-5">
-            <h2 class="h4 mb-3">🤖 AI Powered On-page SEO Audits & SEO TOOLS</h2>
+            <h2 class="h4 mb-3">📄 AI-Assisted On-Page SEO Auditing, Tools & Actionable SEO Reports</h2>
             <ul class="list-group mb-4">
-                <li class="list-group-item">✅ <strong>On-Page SEO Audits</strong>
-                    <p class="text-dark">
-                        Performs a full on-page analysis, including metadata, headers, structured data, and indexing.
-                        <a href="#page_auditor-onpage_audit">Read more</a>
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>On-Page Link Metrics</strong>
-                    <p class="text-dark">
-                        Extracts and categorizes links on a page, including metadata, anchor text, rel attributes, and link metrics.
-                        <a href="#page_auditor-link_metrics">Read more</a>
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Rank Checking & SERP Analysis</strong>
-                    <p class="text-dark">
-                        Conducts structured Google searches and provides SERP results, competitor insights, and keyword analysis.
-                        <a href="#tools-get_serp">Read more</a>
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Indexing Status for Google Search</strong>
-                    <p class="text-dark">
-                        Checks if a URL is indexed in Google and displays the URL, title, and snippet.
-                        <a href="#page_auditor-onpage_audit">Read more</a>
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Keyword Analyses</strong>
-                    <p class="text-dark">
-                        Conducts in-depth keyword analysis to understand ranking opportunities and search intent.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Optimize Meta Tags & Alt Tags</strong>
-                    <p class="text-dark">
-                        Reviews and optimizes title tags, meta descriptions, and alt tags for maximum SEO impact.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Validate Robots.txt & Conduct Technical SEO Checks</strong>
-                    <p class="text-dark">
-                        Checks and validates robots.txt files and performs technical SEO audits.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Retrieve Whois Domain Information</strong>
-                    <p class="text-dark">
-                        Retrieves WHOIS domain data, including registration details and expiration dates.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Perform HTTP Insecure Headers Check</strong>
-                    <p class="text-dark">
-                        Analyzes HTTP headers for security vulnerabilities such as missing CSP and HSTS.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Generate Actionable SEO Reports</strong>
-                    <p class="text-dark">
-                        Generates comprehensive and immediately actionable SEO audit reports.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Create Optimized Content</strong>
-                    <p class="text-dark">
-                        Analyzes and improves content structure and keyword usage for better discoverability.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Improve Titles & Meta Descriptions</strong>
-                    <p class="text-dark">
-                        Provides recommendations for engaging, search-engine-friendly titles and meta descriptions.
-                    </p>
-                </li>
-                <li class="list-group-item">✅ <strong>Actionable Reports & Insights</strong>
-                    <p class="text-dark">
-                        Offers SEO insights with recommendations for immediate improvements.
-                    </p>
-                </li>
+                <li class="list-group-item">✅ <strong>On-Page SEO Audits</strong> - <code>/page_auditor/onpage_audit</code> full on-page analysis: metadata, headers, structured data, keywords, indexing, etc.</li>
+                <li class="list-group-item">✅ <strong>On-Page Keyword Analysis</strong> - <code>/page_auditor/onpage_audit</code> identifies primary & secondary keywords, keyword density, and opportunities.</li>
+                <li class="list-group-item">✅ <strong>On-page Link Tools & Metrics</strong> - <code>/page_auditor/link_parser</code> extracts all links, SEO audit checks alt tags, meta descriptions, and titles.</li>
+                <li class="list-group-item">✅ <strong>Rank Checking & SERP Analysis</strong> - <code>/tools/google_search</code> analyzes Google rankings, competitor positions, and keyword performance.</li>
+                <li class="list-group-item">✅ <strong>Indexing Status for Google Search</strong> - <code>/tools/is_indexed_google</code> checks if a URL is indexed, along with its search snippet.</li>
+                <li class="list-group-item">✅ <strong>Robots.txt Validation & Tools</strong> - <code>/tools/robots_util</code> analyzes robots.txt rules, checks crawl permissions, and extracts sitemaps.</li>
+                <li class="list-group-item">✅ <strong>WHOIS Domain Information Lookup</strong> - <code>/tools/whois_lookup</code> retrieves domain registration details, expiration dates, and registrar information.</li>
+                <li class="list-group-item">✅ <strong>HTTP Insecure Headers Check</strong> - <code>/page_auditor/onpage_audit</code> detects security risks related to HTTP response headers.</li>
+                <li class="list-group-item">✅ <strong>Title & Meta Description Optimization</strong> - <code>/tools/string_length</code> validates and optimizes titles and meta descriptions for ideal character length.</li>
+                <li class="list-group-item">✅ <strong>Actionable Reports & Insights</strong> - Provides detailed SEO reports with clear recommendations for ranking improvement.</li>
+                <li class="list-group-item">✅ <strong>Optimized Content Generation</strong> - Suggests SEO-friendly titles, descriptions, and keyword-rich content.</li>
             </ul>
         </div>
-        <!-- ✅ On-page audit -->
-        <div class="text-block-section">
-            <a name="page_auditor-onpage_audit"></a>
-            <h2 class="h2">📟 On-Page SEO Audits & Reports</h2>
-            <p><strong>The On-page Auditor can do an extensive on-page SEO analysis for one or more pages at a time.</strong>
-               The <code>onpage_audit</code> action will return an extensive audit report with analysis of:
-               titles, meta descriptions, alt tags, structured data, open graph elements, aria-labels, keywords, and more.</p>
-            <p>It is also equipped with a <code>fetch_links</code> action that can retrieve all internal and outgoing hyperlinks from a page
-               and provide on-page link metrics. The <code>fetch_links</code> action can also be used in one prompt together with the
-               <code>onpage_audit</code> action.</p>
-            <p><strong>Full on-page analysis:</strong> metadata, headers, structured data, keywords, indexing and more!</p>
-            <div>
-                <div class="lead"><strong>SEO Assesment score example:</strong></div>
-                <img class="img-fluid" src="https://proseo.tech/static/images/seo-assesment-score.png">
-            </div>
-            <div>
-                <div class="lead"><strong>SEO Assesment Priorities & Actions example:</strong></div>
-                <img class="img-fluid" src="https://proseo.tech/static/images/seo-assesment-priorities-actions.png">
-            </div>
-        </div>
-        <!-- ✅ Link metrics -->
-        <div class="text-block-section">
-            <a name="page_auditor-link_metrics"></a>
-            <h2 class="h2">🔗 On-Page Link Metrics</h2>
-            <p><strong>Comprehensive Link Analysis.</strong>
-               The <code>link_parser</code> action extracts and categorizes all links on a page,
-               providing valuable insights into internal linking structure, anchor text usage,
-               and rel attributes.</p>
-            <p>The <code>link_parser</code> action can be used in combination with the
-               <code>onpage_audit</code> action for a full SEO analysis, including
-               metadata, headers, structured data, and indexing signals.</p>
-            <p><strong>Key Metrics Analyzed:</strong></p>
-            <ul>
-                <li>✅ Total number of links (internal & external)</li>
-                <li>✅ Anchor text distribution and keyword usage</li>
-                <li>✅ Nofollow vs. Dofollow classification</li>
-                <li>✅ HTTP status codes of linked pages</li>
-                <li>✅ Link depth and crawl priority estimation</li>
-            </ul>
-            <div class="lead"><strong>Link metrics example:</strong></div>
-            <img class="img-fluid" src="https://proseo.tech/static/images/link-metircs.png"><br>
-            <p>By analyzing these link metrics, SEO GPT provides actionable
-               recommendations for optimizing site structure, improving internal linking,
-               and enhancing PageRank flow.</p>
-        </div>
-        <!-- ✅ Serp checker -->
-       <div class="text-block-section">
-        <a name="tools-get_serp"></a>
-        <h2 class="h2">📈 Google Rankings Checker & Analysis</h2>
-        <p>The <code>get_serp</code> action allows you to perform in-depth SERP analysis, tracking keyword rankings,
-           analyzing metadata, and gaining competitive insights.</p>
-        <p>This action can also be used in one prompt together with the
-           <code>onpage_audit</code> action, enabling you to compare on-page factors with real-world rankings
-           for a more comprehensive SEO evaluation.</p>
-        <p><strong>Full on-page analysis:</strong> metadata, headers, structured data, keywords, indexing, and more!</p>
-        <br>
-        <div>
-            <div class="lead">
-                <strong>Search engine result page (SERP) example:</strong>
-            </div>
-            <img class="img-fluid" src="https://proseo.tech/static/images/serp-for-keyword-2.png">
-        </div>
-        <br>
-        <div class="lead">
-            <strong>SERP analysis of position 1 to 3:</strong>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Metric</th>
-                        <th>GPT Store Plugin (<a href="#">🔗 Link</a>)</th>
-                        <th>ChatGPT Page 1 (<a href="#">🔗 Link</a>)</th>
-                        <th>ChatGPT Page 2 (<a href="#">🔗 Link</a>)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Processing Time</td>
-                        <td>373.05 ms</td>
-                        <td>761.86 ms</td>
-                        <td>820.77 ms</td>
-                    </tr>
-                    <tr>
-                        <td>Title</td>
-                        <td>✅ ChatGPT Plugin - SEO Assistant (42 chars)</td>
-                        <td>✅ ChatGPT - SEO Assistant (23 chars)</td>
-                        <td>✅ ChatGPT - SEO Assistant (23 chars)</td>
-                    </tr>
-                    <tr>
-                        <td>Meta Description</td>
-                        <td>❌ 174 chars (Too long)</td>
-                        <td>✅ 101 chars (Good)</td>
-                        <td>✅ 90 chars (Good)</td>
-                    </tr>
-                    <tr>
-                        <td>Canonical URL</td>
-                        <td>✅ Yes</td>
-                        <td>❌ Missing</td>
-                        <td>❌ Missing</td>
-                    </tr>
-                    <tr>
-                        <td>Structured Data</td>
-                        <td>✅ JSON-LD (Breadcrumbs)</td>
-                        <td>❌ None</td>
-                        <td>❌ None</td>
-                    </tr>
-                    <tr>
-                        <td>Security Issues</td>
-                        <td>⚠️ Missing CSP, HSTS, X-Frame-Options</td>
-                        <td>⚠️ Weak cache-control, missing X-Frame-Options</td>
-                        <td>⚠️ Weak cache-control, missing X-Frame-Options</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
-    <!-- ✅ Google indexing status -->
-    <div class="text-block-section">
-        <a name="tools-is_index_google"></a>
-        <h2 class="h2">📈 Indexing Satus Google</h2>
-        <p><strong>Checks if an urls is indeded in Google Search.</strong>
-        <p>Use the <code>tools/is_index_google</code> for this action. Can also be used in one prompt together with the other actions.
-        <div>
-            <div class="lead"><strong>Google index lookup example:</strong></div>
-            <img class="img-fluid" src="https://proseo.tech/static/images/seo-indexed-google.png">
-        </div>
-    </div>
-    </div>
+
     <!-- ✅ Footer -->
     <footer id="footer" class="bg-light text-center py-3 mt-5">
         <p>&copy; 2024 Pro SEO Assistant. All rights reserved - <a href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant" target="_blank">Try Pro SEO Assistant</a></p>
     </footer>
+
 </body>
 </html>
