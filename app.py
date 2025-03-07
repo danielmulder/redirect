@@ -7,10 +7,6 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route('/5340712385074902441-2')
-def redir1():
-    return redirect("https://proseo.tech/", code=301)
-
 @app.route('/robots.txt')
 def robots():
     """Serveert robots.txt als statisch bestand"""
