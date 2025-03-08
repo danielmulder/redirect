@@ -39,15 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
    * sectionMap maps each section's ID to the label text we want to show
    * in the dropdown toggle (navTrigger).
    */
-  const sectionMap = {
-    'index': 'Index',
-    'page_auditor-onpage_audit': 'SEO Audits',
-    'page_auditor-link_metrics': 'Link Metrics',
-    'tools-get_serp': 'SERP Analysis',
-    'tools-is_index_google': 'Google Indexing Checker',
-    'tools-keyword_analysis': 'Keyword Analysis',
-    'optimize-meta-alt-tags': 'Meta Tags & Alt Tags'
-  };
+    const sectionMap = {
+      'index': 'Index',
+      'page_auditor-onpage_audit': 'SEO Audits',
+      'page_auditor-link_metrics': 'Link Metrics',
+      'tools-get_serp': 'SERP Analysis',
+      'tools-is_index_google': 'Google Indexing Checker',
+      'tools-keyword_analysis': 'Keyword Analysis',
+      'optimize-meta-alt-tags': 'Meta Tags & Alt Tags',
+      'tools-robots_util': 'Check Robots.txt', // <- Deze komma miste!
+      'tools-whois_lookup': 'Whois Lookup',
+      'tools-insecure_headers': 'Check Headers',
+      'tools-create_optimized_content': 'SEO Optimize Content',
+      'tools-improve_titles_meta': 'Optimize Meta Tags',
+      'tools-actionable_reports': 'Actionable Reports'
+    };
 
   /**
    * Intersection Observer options:
