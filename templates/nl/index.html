@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ✅ SEO Titel en Meta Beschrijving -->
+    <title>Pro SEO Assistant GPT | Gratis AI SEO Tool voor ChatGPT</title>
+    <link rel="icon" type="image/png" href="https://proseo.tech/static/images/favicon.png">
+    <meta name="description" content="Pro SEO Assistant GPT - Gratis AI SEO Tool voor ChatGPT. API-gedreven SEO-tool voor pagina-audits. Contentoptimalisatie met live nauwkeurige data en direct toepasbare rapporten.">
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://proseo.tech/">
+    <!-- ✅ Meta Robots Tag -->
+    <meta name="robots" content="index, follow">
+    <!-- Hreflang-tags voor ENG (default) AND NL -->
+    <link rel="alternate" href="https://proseo.tech/" hreflang="en" />
+    <link rel="alternate" href="https://proseo.tech/nl/" hreflang="nl" />
+    <link rel="alternate" href="https://proseo.tech/" hreflang="x-default" />
+    <!-- ✅ Open Graph Meta Tags -->
+    <meta property="og:title" content="Pro SEO Assistant GPT | AI SEO Tool ChatGPT | Gratis SEO Tool">
+    <meta property="og:description" content="Pro SEO Assistant GPT - Gratis AI SEO Tool voor ChatGPT. API-gedreven AI SEO-tool voor pagina-audits. Contentoptimalisatie met live nauwkeurige data en direct toepasbare rapporten.">
+    <meta property="og:url" content="https://proseo.tech/">
+    <meta property="og:site_name" content="Pro SEO Tech">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://proseo.tech/static/images/logo.svg">
+    <meta property="og:image:alt" content="Pro SEO GPT - avatar logo">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <!-- ✅ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pro SEO Assistant",
+      "operatingSystem": "Web",
+      "applicationCategory": "SEO Tool",
+      "url": "https://proseo.tech/",
+      "image": "https://proseo.tech/static/images/logo.svg",
+      "description": "Pro SEO Assistant AI is een API-gedreven AI SEO-tool voor on-page audits en contentoptimalisatie met live nauwkeurige data en direct toepasbare rapporten.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Pro SEO Tech",
+        "url": "https://proseo.tech/"
+      },
+      "sameAs": [
+        "https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
+      ],
+      "softwareVersion": "1.0",
+      "applicationSubCategory": "Web-based SEO Analysis",
+      "creator": {
+        "@type": "Person",
+        "name": "Daniél Mulder",
+        "sameAs": "https://www.linkedin.com/in/danielmulder1979/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "250"
+      }
+    }
+    </script>
+    <!-- JS Scripts -->
+    <script src="https://proseo.tech/static/js/main.js"></script>
+    <!-- ✅ Stylesheets -->
+    <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" media="all" />
+</head>
+<body id="_body">
+    <!-- ✅ Navbar -->
+    <nav id="sticky-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img id="logo_nav" src="https://proseo.tech/static/images/logo.svg" alt="Pro SEO Tech Logo - Pro SEO Assistant GPT Logo">
+            <span class="logo-text">Pro SEO Assistant</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Navigatie in-/uitschakelen">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ga naar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#index">Index</a></li>
+                        <li><a class="dropdown-item" href="#page_auditor-onpage_audit">SEO Audits</a></li>
+                        <li><a class="dropdown-item" href="#page_auditor-link_metrics">Link Statistieken</a></li>
+                        <li><a class="dropdown-item" href="#tools-keyword_analysis">Keyword analyse</a></li>
+                        <li><a class="dropdown-item" href="#tools-create_optimized_content">SEO geoptimaliseerde content</a></li>
+                        <li><a class="dropdown-item" href="#tools-improve_titles_meta">Meta tags optimaliseren</a></li>
+                        <li><a class="dropdown-item" href="#optimize-meta-alt-tags">Meta & Alt-tags</a></li>
+                        <li><a class="dropdown-item" href="#tools-robots_util">Robots.txt checker</a></li>
+                        <li><a class="dropdown-item" href="#tools-get_serp">SERP analyse</a></li>
+                        <li><a class="dropdown-item" href="#tools-is_index_google">Google indexcontrole</a></li>
+                        <li><a class="dropdown-item" href="#tools-whois_lookup">Whois lookup</a></li>
+                        <li><a class="dropdown-item" href="#tools-insecure_headers">Controleer onveilige headers</a></li>
+                        <li><a class="dropdown-item" href="#tools-actionable_reports">Direct toepasbare rapporten</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Rechterzijde navigatie (ms-auto => items naar rechts) -->
+            <ul class="navbar-nav ms-auto align-items-center">
+            <!-- Taalkeuze -->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle" href="#" id="langDropdown"
+                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+              </a>
+              <ul class="dropdown-menu lang-dropdown" aria-labelledby="langDropdown">
+                <li><a class="dropdown-item" href="https://proseo.tech/">EN</a></li>
+                <li><a class="dropdown-item" href="https://proseo.tech/nl/">NL</a></li>
+              </ul>
+            </li>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold"
+                       href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
+                       target="_blank">
+                        Gebruik Pro SEO Assistant
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <!-- ✅ Content -->
+    <div class="container pt-5">
+        <div class="page-header" id="banner">
+            <h1>Pro SEO Assistant GPT</h1>
+        </div>
+        <div class="mt-5">
+            <h2 class="h4 mb-3">Officiële Website - Pro SEO Assistant GPT</h2>
+            <p class="text-dark">
+                De Pro SEO Assistant is een SEO tool voor ChatGPT. Een <strong>gespecialiseerde GPT</strong>, beschikbaar in de GPT Store, die <strong>de kracht van ChatGPT + geavanceerde SEO-data</strong> combineert. Via externe integraties haalt deze GPT
+                betrouwbare data op, wat resulteert in nauwkeurige analyses en direct toepasbare rapporten.
+            </p>
+            <p class="text-dark">
+                <strong>De meeste SEO AI-tools, ook wel ChatGPT SEO tools, geven schattingen</strong>, maar deze SEO-GPT haalt <strong>feitelijke data</strong> van webpagina's op. Dit maakt de SEO-analyses zeer nauwkeurig, betrouwbaar
+                en <strong>levert diepgaande SEO-inzichten die vaak echt indrukwekkend zijn.</strong>
+            </p>
+        </div>
+        <a id="index" name="index"></a>
+        <!-- ✅ SEO Audit Features -->
+        <div class="mt-5 index-section">
+            <h2 class="h4 mb-3">🤖 AI-gestuurde On-page SEO audits & SEO tools</h2>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">✅ <strong>On-page SEO audits</strong>
+                    <p class="text-dark">
+                        Voert een volledige on-page SEO-analyse uit, inclusief metadata, headers, gestructureerde data en indexering.
+                        <a href="#page_auditor-onpage_audit">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>On-page Link Statistieken</strong>
+                    <p class="text-dark">
+                        Haalt links op en categoriseert ze (intern en extern), inclusief metadata, anchor-tekst, rel-attributen en linkmetingen.
+                        <a href="#page_auditor-link_metrics">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>keyword analyses</strong>
+                    <p class="text-dark">
+                        Voert diepgaande keyword analyses uit om kansen voor ranking en zoekintentie te begrijpen.
+                        <a href="#tools-keyword_analysis">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Optimaliseer meta tags & Alt-tags</strong>
+                    <p class="text-dark">
+                        Beoordeelt en optimaliseert titeltags, metabeschrijvingen en alt-tags voor maximale SEO-impact.
+                        <a href="#optimize-meta-alt-tags">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Maak geoptimaliseerde content</strong>
+                    <p class="text-dark">
+                        Analyseert en verbetert de contentstructuur en keyword-gebruik voor betere vindbaarheid.
+                        <a href="#tools-create_optimized_content">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Verbeter titels & metabeschrijvingen</strong>
+                    <p class="text-dark">
+                        Geeft aanbevelingen voor pakkende, SEO vriendelijke titels en metabeschrijvingen.
+                        <a href="#tools-improve_titles_meta">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Valideer Robots.txt & voer technische SEO checks uit</strong>
+                    <p class="text-dark">
+                        Controleert en valideert robots.txt-bestanden en voert technische SEO audits uit.
+                        <a href="#tools-robots_util">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Rank-checking & SERP-analyse</strong>
+                    <p class="text-dark">
+                        Voert gestructureerde Google-zoekopdrachten uit en biedt SERP-resultaten, concurrentie inzichten en keyword analyses.
+                        <a href="#tools-get_serp">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Indexeringsstatus voor Google zoekresultaten</strong>
+                    <p class="text-dark">
+                        Controleert of een URL is geïndexeerd in Google en toont de URL, titel en snippet.
+                        <a href="#page_auditor-onpage_audit">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Whois domeininformatie opvragen</strong>
+                    <p class="text-dark">
+                        Haalt WHOIS-domeingegevens op, inclusief registratiedetails en vervaldatums.
+                        <a href="#tools-whois_lookup">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Controle van HTTP onveilige headers</strong>
+                    <p class="text-dark">
+                        Analyseert HTTP-headers op beveiligingsrisico's zoals ontbrekende CSP en HSTS.
+                        <a href="#tools-insecure_headers">Lees meer</a>
+                    </p>
+                </li>
+                <li class="list-group-item">✅ <strong>Direct toepasbare SEO rapporten & inzichten</strong>
+                    <p class="text-dark">
+                        Biedt SEO-inzichten met aanbevelingen voor directe verbeteringen.
+                        <a href="#tools-actionable_reports">Lees meer</a>
+                    </p>
+                </li>
+            </ul>
+            <p></p>
+        </div>
+        <!-- ✅ On-page audit -->
+        <div class="text-block-section">
+            <a id="page_auditor-onpage_audit" name="page_auditor-onpage_audit"></a>
+            <h2 class="h2">📟 On-page SEO audits & rapporten</h2>
+            <p><strong>De SEO-tool genaamd On-page Auditor kan een uitgebreide on-page SEO analyse uitvoeren voor een of meerdere pagina's tegelijk.</strong>
+               De actie <code>onpage_audit</code> geeft een uitgebreid auditrapport met analyses van:
+               titels, metabeschrijvingen, alt-tags, gestructureerde data, open graph-elementen, aria-labels, keywords en meer.
+            </p>
+            <p>De tool heeft ook een <code>fetch_links</code>-actie waarmee alle interne en uitgaande hyperlinks van een pagina kunnen worden opgehaald,
+               inclusief on-page linkmetingen. De <code>fetch_links</code>-actie kan ook in één prompt samen met
+               de <code>onpage_audit</code>-actie worden gebruikt.
+            </p>
+            <p><strong>Volledige on-page analyse:</strong> metadata, headers, gestructureerde data, keywords, indexering en meer!</p>
+            <p>🔗Zie deze <a href="https://chatgpt.com/share/67c90539-6848-8009-a25e-a614e11acf59">gedeelde chatsessie met on-page SEO-audit</a> als voorbeeld!</p>
+            <div>
+                <div class="lead"><strong>Voorbeeld van SEO-beoordelingsscore:</strong></div>
+                <img class="img-fluid" src="https://proseo.tech/static/images/seo-assesment-score.png" alt="SEO-beoordelingsscore Screenshot">
+            </div>
+            <div>
+                <div class="lead"><strong>Voorbeeld van SEO-beoordelingsprioriteiten & acties:</strong></div>
+                <img class="img-fluid" src="https://proseo.tech/static/images/seo-assesment-priorities-actions.png" alt="Direct toepasbare Prioriteitenlijst SEO">
+            </div>
+        </div>
+        <!-- ✅ Link metrics -->
+        <div class="text-block-section">
+            <a id="page_auditor-link_metrics" name="page_auditor-link_metrics"></a>
+            <h2 class="h2">🔗 On-page Link Statistieken</h2>
+            <p><strong>Uitgebreide linkanalyse.</strong>
+               De <code>link_parser</code>-actie extraheert en categoriseert alle links op een pagina,
+               en geeft waardevolle inzichten in de interne linkstructuur, het gebruik van anchor-tekst,
+               en rel-attributen.
+            </p>
+            <p>De <code>link_parser</code>-actie kan worden gecombineerd met
+               <code>onpage_audit</code> voor een volledige SEO analyse, inclusief
+               metadata, headers, gestructureerde data en indexeringssignalen.
+            </p>
+            <p>🔗Zie deze <a href="https://chatgpt.com/share/67c906c2-1e1c-8009-9e43-ecbfefae7ef7">gedeelde chatsessie met link-metrieken SEO-rapport</a> als voorbeeld!</p>
+
+            <p><strong>Belangrijkste geanalyseerde metrieken:</strong></p>
+            <ul>
+                <li>✅ Totaal aantal links (intern & extern)</li>
+                <li>✅ Verdeling van anchor-teksten en gebruik van keywords</li>
+                <li>✅ Classificatie nofollow vs. dofollow</li>
+                <li>✅ HTTP-statuscodes van gelinkte pagina's</li>
+                <li>✅ Linkdiepte en schatting crawlprioriteit</li>
+            </ul>
+            <div class="lead"><strong>Voorbeeld link-metrieken:</strong></div>
+            <img class="img-fluid" src="https://proseo.tech/static/images/link-metircs.png" alt="Link-metrieken rapport screenshot"><br>
+            <p>Door deze link-metrieken te analyseren, geeft SEO-GPT direct toepasbare
+               aanbevelingen om de sitestructuur te optimaliseren, interne linking te verbeteren
+               en de PageRank flow te versterken.
+            </p>
+        </div>
+    <!-- ✅ Keyword Analyses Extended Info -->
+    <div class="text-block-section">
+        <a id="tools-keyword_analysis" name="tools-keyword_analysis"></a>
+        <h2 class="h2">🔎 Keyword-analyse</h2>
+        <p>
+            <strong>De basis van elke succesvolle SEO-strategie.</strong>
+            De <code>keyword_analysis</code>-actie van Pro SEO Assistant GPT gaat
+            verder dan alleen een lijst keywords. Het integreert zoekvolumes, competitiedata
+            en signalen rond gebruikersintentie om de beste kansen op ranking te belichten. Zo
+            kun je je content, meta tags en andere on-page elementen nauwkeurig afstemmen
+            op de meest relevante zoektermen voor je doelgroep.
+        </p>
+        <p>
+            Daarnaast onthult deze functie gerelateerde zoekopdrachten, intentie-segmenten
+            (transactioneel, informatief of navigerend) en mogelijke synoniemen die de vindbaarheid
+            verder vergroten. Zo kun je content creëren die precies aansluit bij waar gebruikers
+            naar zoeken—wat je relevantie én conversies verhoogt.
+        </p>
+        <p>
+            🔗Zie deze
+            <a href="https://chatgpt.com/share/67cb24e2-5e44-8009-a5e6-02c8d74bb963" target="_blank">
+                gedeelde chatsessie met geavanceerde keyword-analyse
+            </a> als voorbeeld!
+        </p>
+        <p><strong>Belangrijkste geanalyseerde metrieken:</strong></p>
+        <ul>
+            <li>✅ Zoekvolume en seizoensgebonden trends</li>
+            <li>✅ Concurrentieniveau en SERP functionaliteiten (bijv. featured snippets)</li>
+            <li>✅ Zoekintentie en relevantie van gerelateerde keywords</li>
+            <li>✅ Long-tail variaties en semantisch verwante termen</li>
+            <li>✅ Keyword-moeilijkheidsgraad & CPC-indicatoren</li>
+        </ul>
+        <div class="lead"><strong>Voorbeeld van keyword analyses:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/serp-analysis-example.png" alt="Keyword Analysis Report Screenshot"><br>
+        <p>
+            Met deze diepgaande keyword-analyse krijg je een helder overzicht van welke
+            zoektermen er echt toe doen, hoe competitief ze zijn en hoe je ze
+            optimaal kunt inzetten. Zo vergroot je de kans op hogere posities en
+            sluit je perfect aan op de gebruikersintentie.
+        </p>
+    </div>
+
+    <!-- ✅ Optimize Meta Tags & Alt Tags -->
+    <div class="text-block-section">
+        <a id="optimize-meta-alt-tags" name="optimize-meta-alt-tags"></a>
+        <h2 class="h2">🏷️ Optimaliseer meta tags & Alt-tags</h2>
+        <p>
+            <strong>Maximaliseer je SEO impact met geoptimaliseerde tags.</strong>
+            meta tags en alt-tags hebben grote invloed op hoe zoekmachines je content begrijpen en hoe gebruikers je site zien in zoekresultaten.
+            Pro SEO Assistant GPT beoordeelt en optimaliseert de titeltags, metabeschrijvingen en alt-tags van je site, zodat ze effectief je belangrijkste zoekwoorden targeten, de relevantie van je content verduidelijken en de toegankelijkheid verbeteren.
+        </p>
+        <p>
+            Het optimaliseren van deze elementen kan de click-through-rate (CTR) aanzienlijk verhogen door pakkende metabeschrijvingen en titeltags die de aandacht trekken in de zoekresultaten (SERP).
+            Goed gestructureerde alt-tags helpen zoekmachines bovendien bij het begrijpen van de afbeeldingen op je pagina’s, wat extra context toevoegt en tevens de toegankelijkheid verbetert voor gebruikers met een visuele beperking.
+        </p>
+        <p><strong>Belangrijkste optimalisaties:</strong></p>
+        <ul>
+            <li>✅ <strong>Titeltags:</strong> Precieze, keyword-rijke titels geoptimaliseerd voor relevantie en lengte.</li>
+            <li>✅ <strong>Metabeschrijvingen:</strong> Pakkende, beknopte beschrijvingen ontworpen voor hogere gebruikersbetrokkenheid en CTR.</li>
+            <li>✅ <strong>Afbeelding-Alt-tags:</strong> Beschrijvende en nauwkeurige alt-teksten die de SEO waarde en toegankelijkheid verhogen.</li>
+            <li>✅ <strong>Consistentiecontroles:</strong> Zorgt voor consistente boodschap in alle tags en on-page elementen.</li>
+            <li>✅ <strong>Richtlijnen beste praktijken:</strong> Direct toepasbare inzichten om de kwaliteit van tags blijvend hoog te houden.</li>
+        </ul>
+
+        <div class="lead"><strong>Voorbeeld van geoptimaliseerde tags:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/optimizing-meta tags-title-description-example.png" alt="Voorbeeld geoptimaliseerde meta tags en Alt-tags">
+
+        <div class="lead"><strong>Voorbeeld van automatisch gegenereerde ontbrekende alt-tags:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/generate-missing-image-alt-tags-example.png" alt="Voorbeeld van automatisch gegenereerde alt-tags voor ontbrekende afbeeldingen"><br>
+        <p>
+            Door deze elementen zorgvuldig te optimaliseren, zorgt Pro SEO Assistant GPT ervoor dat jouw content duidelijk naar voren komt in zoekresultaten, wat zowel zichtbaarheid als verkeer verbetert.
+        </p>
+        <p>
+            🔗Zie deze
+            <a href="https://chatgpt.com/share/67cb5e1d-018c-8009-8943-f6eb774a01d6" target="_blank">
+                gedeelde chatsessie met geavanceerde keyword analyse
+            </a> als voorbeeld!
+        </p>
+    </div>
+    <!-- ✅ Create Optimized Content -->
+    <div class="text-block-section">
+        <a id="tools-create_optimized_content" name="tools-create_optimized_content"></a>
+        <h2 class="h2">✏️ Maak SEO-geoptimaliseerde content</h2>
+        <p>
+            <strong>Verhoog de vindbaarheid en relevantie van je content.</strong>
+            Pro SEO Assistant GPT analyseert en verbetert je content door de structuur, leesbaarheid, keyworddichtheid en keywordplaatsing te optimaliseren. Zo voldoet je content aan zowel de verwachtingen van gebruikers als de beste SEO richtlijnen, wat je kansen vergroot op hogere posities en betere gebruikersinteractie.
+        </p>
+        <p><strong>Optimalisaties omvatten onder andere:</strong></p>
+        <ul>
+            <li>✅ Verbeterde contentstructuur & leesbaarheid</li>
+            <li>✅ Strategisch keywordgebruik & controle van keyworddichtheid</li>
+            <li>✅ Semantische keywordoptimalisatie</li>
+            <li>✅ Suggesties voor extra onderwerpen of gerelateerde zoekopdrachten</li>
+        </ul>
+    </div>
+    <!-- ✅ Improve Titles & Meta Descriptions -->
+    <div class="text-block-section">
+        <a id="tools-improve_titles_meta" name="tools-improve_titles_meta"></a>
+        <h2 class="h2">🏷️ Verbeter titels & metabeschrijvingen</h2>
+        <p>
+            <strong>Maak je pagina's onweerstaanbaar in de zoekresultaten.</strong>
+            Pro SEO Assistant GPT genereert gedetailleerde aanbevelingen voor pakkende, duidelijke en keyword-rijke titels en metabeschrijvingen. Geoptimaliseerde tags verhogen je click-through-rate (CTR) en verbeteren de zichtbaarheid in zoekmachines.
+        </p>
+        <p><strong>Verbeteringen die worden geboden:</strong></p>
+        <ul>
+            <li>✅ Pakkende, keyword-geoptimaliseerde titeltags</li>
+            <li>✅ Aantrekkelijke, beknopte metabeschrijvingen</li>
+            <li>✅ Afstemming op gebruikersintentie & zoekopdrachten</li>
+            <li>✅ Optimalisatie voor lengte & leesbaarheid</li>
+        </ul>
+        <div class="lead"><strong>Voorbeeld van verbeterde titels & metabeschrijvingen:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/optimizing-meta tags-title-description-example.png" alt="Voorbeeld van optimalisatie van titels en metabeschrijvingen">
+        <p>
+            Zorg ervoor dat je pagina's opvallen in de zoekresultaten en meer organisch verkeer aantrekken.
+        </p>
+    </div>
+    <!-- ✅ Validate Robots.txt & Conduct Technical SEO Checks -->
+    <div class="text-block-section">
+        <a id="tools-robots_util" name="tools-robots_util"></a>
+        <h2 class="h2">🤖 Valideer Robots.txt & technische SEO checks</h2>
+        <p>
+            <strong>Zorg dat je site klaar is voor crawlers en SEO-proof is.</strong>
+            Pro SEO Assistant GPT controleert snel je <code>robots.txt</code>-bestand op syntaxfouten, crawltoestemmingen en verwijzingen naar sitemaps.
+            Daarnaast identificeert het technische SEO-problemen zoals onjuiste directives, blokkerende configuraties of syntaxfouten die de indexering en crawlefficiëntie kunnen belemmeren.
+        </p>
+        <p><strong>Belangrijkste controles:</strong></p>
+        <ul>
+            <li>✅ <strong>Robots.txt-validatie</strong> (syntax en directives)</li>
+            <li>✅ <strong>Crawltoestemmingen</strong> testen voor cruciale URL's</li>
+            <li>✅ <strong>Sitemap-ophalen en validatie</strong></li>
+            <li>✅ <strong>Opsporen van technische SEO-problemen</strong> (indexeringsblokkades, foute directives)</li>
+        </ul>
+        <div class="lead"><strong>Voorbeeld Robots.txt & technische SEO-check:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/robots-txt-validation-example.png" alt="Voorbeeld Robots.txt-validatie & technische SEO-check">
+        <p>
+            Los potentiële problemen vroegtijdig op en zorg dat je site volledig toegankelijk en geoptimaliseerd is voor zoekmachines.
+        </p>
+    </div>
+    <!-- ✅ SERP checker -->
+    <div class="text-block-section">
+        <a id="tools-get_serp" name="tools-get_serp"></a>
+        <h2 class="h2">📈 Google Rankings checker & analyse</h2>
+        <p>Met de actie <code>get_serp</code> kun je een uitgebreide SERP analyse uitvoeren: het volgen van keywordrangschikkingen,
+           het analyseren van metadata en het verkrijgen van concurrentie inzichten.</p>
+        <p>Deze actie kan ook in één prompt worden gecombineerd met
+           <code>onpage_audit</code>, zodat je on-page factoren kunt vergelijken met daadwerkelijke rankings
+           voor een meer volledige SEO evaluatie.</p>
+        <p><strong>Volledige on-page analyse:</strong> metadata, headers, gestructureerde data, keywords, indexering en meer!</p>
+        <br>
+        <div>
+            <div class="lead">
+                <strong>Voorbeeld van zoekresultatenpagina (SERP):</strong>
+            </div>
+            <img class="img-fluid" src="https://proseo.tech/static/images/serp-for-keyword-2.png" alt="Google SERP-analyse screenshot">
+        </div>
+        <br>
+        <div class="lead">
+            <strong>SERP-analyse van positie 1 t/m 3:</strong>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Metric</th>
+                        <th>GPT Store Plugin (<a href="#">🔗 Link</a>)</th>
+                        <th>ChatGPT Pagina 1 (<a href="#">🔗 Link</a>)</th>
+                        <th>ChatGPT Pagina 2 (<a href="#">🔗 Link</a>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Verwerkingstijd</td>
+                        <td>373,05 ms</td>
+                        <td>761,86 ms</td>
+                        <td>820,77 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Titel</td>
+                        <td>✅ ChatGPT Plugin - SEO Assistant (42 tekens)</td>
+                        <td>✅ ChatGPT - SEO Assistant (23 tekens)</td>
+                        <td>✅ ChatGPT - SEO Assistant (23 tekens)</td>
+                    </tr>
+                    <tr>
+                        <td>Metabeschrijving</td>
+                        <td>❌ 174 tekens (Te lang)</td>
+                        <td>✅ 101 tekens (Goed)</td>
+                        <td>✅ 90 tekens (Goed)</td>
+                    </tr>
+                    <tr>
+                        <td>Canonical URL</td>
+                        <td>✅ Ja</td>
+                        <td>❌ Ontbreekt</td>
+                        <td>❌ Ontbreekt</td>
+                    </tr>
+                    <tr>
+                        <td>Gestructureerde data</td>
+                        <td>✅ JSON-LD (Broodkruimels)</td>
+                        <td>❌ Geen</td>
+                        <td>❌ Geen</td>
+                    </tr>
+                    <tr>
+                        <td>Beveiligingsproblemen</td>
+                        <td>⚠️ Ontbrekende CSP, HSTS, X-Frame-Options</td>
+                        <td>⚠️ Zwakke cache-control, ontbrekende X-Frame-Options</td>
+                        <td>⚠️ Zwakke cache-control, ontbrekende X-Frame-Options</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- ✅ Google indexing status -->
+    <div class="text-block-section">
+        <a id="tools-is_index_google" name="tools-is_index_google"></a>
+        <h2 class="h2">📈 Google-indexstatus</h2>
+        <p><strong>Controleer of een URL is opgenomen in de Google zoekresultaten.</strong></p>
+        <p>Gebruik de actie <code>tools/is_index_google</code> hiervoor. Kan ook in één prompt samen met andere acties.</p>
+        <div>
+            <div class="lead"><strong>Voorbeeld van Google indexopvraging:</strong></div>
+            <img class="img-fluid" src="https://proseo.tech/static/images/seo-indexed-google.png" alt="Screenshot van tool voor Google-indexcontrole">
+        </div>
+    </div>
+    <!-- ✅ Retrieve WHOIS Domain Information -->
+    <div class="text-block-section">
+        <a id="tools-whois_lookup" name="tools-whois_lookup"></a>
+        <h2 class="h2">🌐 Whois-domeininformatie opvragen</h2>
+        <p>
+            <strong>Controleer eenvoudig domeinregistratiedetails en status.</strong>
+            De actie <code>whois_lookup</code> haalt uitgebreide WHOIS-informatie op, waaronder de registratiedatum, vervaldatum, registrar-gegevens en nameservers. Gebruik deze data voor concurrentieanalyse, domeinvalidatie en het nauwkeurig bijhouden van domeinggevens.
+        </p>
+        <p><strong>Beschikbare gegevens:</strong></p>
+        <ul>
+            <li>✅ Registratie- & vervaldatums van het domein</li>
+            <li>✅ Registrar-details (bijv. NameCheap, GoDaddy)</li>
+            <li>✅ Nameservers & DNS-informatie</li>
+            <li>✅ Status WHOIS-privacy</li>
+        </ul>
+        <div class="lead"><strong>Voorbeeld van WHOIS-domeingegevens:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/whois-lookup-example.png" alt="WHOIS-domeininformatie screenshot">
+        <p>
+            Nauwkeurige WHOIS-data helpt om domeineigenaarschap transparant te houden en ondersteunt bij technische probleemoplossing, domeinovername en het monitoren van vervaldatums.
+        </p>
+    </div>
+    <!-- ✅ Perform HTTP Insecure Headers Check -->
+    <div class="text-block-section">
+        <a id="tools-insecure_headers" name="tools-insecure_headers"></a>
+        <h2 class="h2">🔒 Controleer HTTP onveilige headers</h2>
+        <p>
+            <strong>Identificeer beveiligingslekken in HTTP-headers.</strong>
+            Deze tool evalueert snel de HTTP-headers van je website om belangrijke beveiligingsproblemen te detecteren. Specifiek kijkt het naar ontbrekende of onveilige headers zoals Content Security Policy (CSP), HTTP Strict Transport Security (HSTS) en X-Frame-Options, die essentieel zijn om je website te beschermen tegen diverse aanvallen.
+        </p>
+        <p><strong>Gecontroleerde beveiligingslekken:</strong></p>
+        <ul>
+            <li>✅ Ontbrekende of verkeerd geconfigureerde Content-Security-Policy (CSP)</li>
+            <li>✅ Ontbrekende HTTP Strict Transport Security (HSTS)</li>
+            <li>✅ Afwezigheid van beveiligingsheaders (zoals X-Frame-Options, X-Content-Type-Options)</li>
+            <li>✅ Zwakke cache-control-instellingen</li>
+        </ul>
+        <div class="lead"><strong>Voorbeeld controle onveilige HTTP-headers:</strong></div>
+        <img class="img-fluid" src="https://proseo.tech/static/images/insecure-http-headers-example.png" alt="Screenshot van controle op onveilige HTTP-headers">
+        <p>
+            Spoor potentiële risico's snel op en bescherm je gebruikers en website tegen veelvoorkomende beveiligingsdreigingen met duidelijke, direct toepasbare adviezen.
+        </p>
+    </div>
+
+    <!-- ✅ Actionable SEO Reports & SEO Insights -->
+    <div class="text-block-section">
+        <a id="tools-actionable_reports" name="tools-actionable_reports"></a>
+        <h2 class="h2">📋 Direct toepasbare SEO-rapporten & inzichten</h2>
+        <p>
+            <strong>Maak van data direct uitvoerbare acties.</strong>
+            Pro SEO Assistant GPT levert duidelijke, direct toepasbare SEO-rapporten met prioriteitsaanbevelingen op basis van real-time data. Elk rapport bevat een uitgebreide SEO-beoordeling en belicht kansen voor onmiddellijke verbeteringen, groei en concurrentievoordeel.
+        </p>
+        <p><strong>Rapporten bevatten:</strong></p>
+        <ul>
+            <li>✅ Geprioriteerde lijst met SEO verbeteringen</li>
+            <li>✅ Gedetailleerde scores & benchmarking statistieken</li>
+            <li>✅ Aanbevelingen volgens de beste SEO praktijken</li>
+            <li>✅ concurrentie inzichten en gap analyses</li>
+        </ul>
+    </div>
+    <!-- Div container close -->
+    </div>
+    <div class="modal" id="contact_modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modaltitel</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten">
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal-tekst komt hier.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Wijzigingen opslaan</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Footer -->
+    <footer id="footer" class="bg-light text-center py-3 mt-5">
+        <p>&copy; 2025 Pro SEO Assistant | Alle rechten voorbehouden | AI SEO-tool voor ChatGPT | <a href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant" target="_blank">Pro SEO Assistant GPT proberen</a></p>
+    </footer>
+    <!-- Bootstrap JS (inclusief Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://proseo.tech/static/js/body_close.js"></script>
+</body>
+</html>

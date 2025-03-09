@@ -16,9 +16,14 @@ p {
 .dropdown-menu {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 220px !important;
+    width: 245px !important;
     white-space: nowrap !important;
+}
 
+.lang-dropdown {
+  min-width: 100px;
+  width: auto;
+  padding-right: 20px;
 }
 
 .dropdown-menu .dropdown-item {

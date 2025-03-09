@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route('/nl/')
+def home_nl():
+    return render_template("nl/index.html")
+
 @app.route('/robots.txt')
 def robots():
     """Serveert robots.txt als statisch bestand"""

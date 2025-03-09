@@ -11,6 +11,11 @@
     <link rel="canonical" href="https://proseo.tech/">
     <!-- ✅ Meta Robots Tag -->
     <meta name="robots" content="index, follow">
+    <!-- Hreflang-tags voor ENG (default) -->
+    <link rel="alternate" href="https://proseo.tech/" hreflang="en" />
+    <link rel="alternate" href="https://proseo.tech/nl/" hreflang="nl" />
+    <link rel="alternate" href="https://proseo.tech/" hreflang="x-default" />
+
     <!-- ✅ Open Graph Meta Tags -->
     <meta property="og:title" content="Pro SEO Assistant GPT | AI SEO Tool ChatGPT | Free SEO Tool">
     <meta property="og:description" content="Pro SEO Assistant GPT - Free AI SEO Tool for ChatGPT. API-driven SEO AI Tool for Page Audits. Content optimization with live accurate data & actionable reports.">
@@ -65,55 +70,80 @@
     <script src="https://proseo.tech/static/js/main.js"></script>
     <!-- ✅ Stylesheets -->
     <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/bootstrap.css" />
-    <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/styles.css" />
+    <link media="all" rel="stylesheet" href="static/css/styles.css" />
 </head>
 <body id="_body">
-    <!-- ✅ Navbar -->
-    <nav id="sticky-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img id="logo_nav" src="https://proseo.tech/static/images/logo.svg" alt="Pro SEO Tech Logo - Pro SEO Assistant GPT Logo">
-            <span class="logo-text">Pro SEO Assistant</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Go to
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#index">Index</a></li>
-                        <li><a class="dropdown-item" href="#page_auditor-onpage_audit">SEO Audits</a></li>
-                        <li><a class="dropdown-item" href="#page_auditor-link_metrics">Link Metrics</a></li>
-                        <li><a class="dropdown-item" href="#tools-keyword_analysis">Keyword Analysis</a></li>
-                        <li><a class="dropdown-item" href="#tools-create_optimized_content">SEO Optimize Content</a></li>
-                        <li><a class="dropdown-item" href="#tools-improve_titles_meta">Optimize Meta Tags</a></li>
-                        <li><a class="dropdown-item" href="#optimize-meta-alt-tags">Meta & Alt Tags</a></li>
-                        <li><a class="dropdown-item" href="#tools-robots_util">Robots.txt Checker</a></li>
-                        <li><a class="dropdown-item" href="#tools-get_serp">SERP Analysis</a></li>
-                        <li><a class="dropdown-item" href="#tools-is_index_google">Google Indexing Checker</a></li>
-                        <li><a class="dropdown-item" href="#tools-whois_lookup">Whois Lookup</a></li>
-                        <li><a class="dropdown-item" href="#tools-insecure_headers">Check Insecure Headers</a></li>
-                        <li><a class="dropdown-item" href="#tools-actionable_reports">Actionable Reports</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold"
-                       href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
-                       target="_blank">
-                        Use Pro SEO Assistant
-                    </a>
-                </li>
-            </ul>
-        </div>
+<nav id="sticky-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container">
+    <!-- Logo/Branding -->
+    <a class="navbar-brand" href="#">
+      <img id="logo_nav" src="https://proseo.tech/static/images/logo.svg" alt="Pro SEO Tech Logo">
+      <span class="logo-text">Pro SEO Assistant</span>
+    </a>
+
+    <!-- Toggle-knop voor mobiel weergave -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- De daadwerkelijke uitklapbare inhoud -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Linkerzijde navigatie (me-auto => verschuift items naar links) -->
+      <ul class="navbar-nav me-auto">
+        <!-- Voorbeeld van dropdownmenu “Index” -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Index
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#index">Index</a></li>
+            <li><a class="dropdown-item" href="#page_auditor-onpage_audit">SEO Audits</a></li>
+            <li><a class="dropdown-item" href="#page_auditor-link_metrics">Link Metrics</a></li>
+            <li><a class="dropdown-item" href="#tools-keyword_analysis">Keyword Analysis</a></li>
+            <li><a class="dropdown-item" href="#tools-create_optimized_content">SEO Optimize Content</a></li>
+            <li><a class="dropdown-item" href="#tools-improve_titles_meta">Optimize Meta Tags</a></li>
+            <li><a class="dropdown-item" href="#optimize-meta-alt-tags">Meta & Alt Tags</a></li>
+            <li><a class="dropdown-item" href="#tools-robots_util">Robots.txt Checker</a></li>
+            <li><a class="dropdown-item" href="#tools-get_serp">SERP Analysis</a></li>
+            <li><a class="dropdown-item" href="#tools-is_index_google">Google Indexing Checker</a></li>
+            <li><a class="dropdown-item" href="#tools-whois_lookup">Whois Lookup</a></li>
+            <li><a class="dropdown-item" href="#tools-insecure_headers">Check Insecure Headers</a></li>
+            <li><a class="dropdown-item" href="#tools-actionable_reports">Actionable Reports</a></li>
+          </ul>
+        </li>
+        <!-- Voeg hier eventueel meer menu-items toe -->
+      </ul>
+
+      <!-- Rechterzijde navigatie (ms-auto => items naar rechts) -->
+      <ul class="navbar-nav ms-auto align-items-center">
+        <!-- Taalkeuze -->
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="langDropdown"
+             role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul class="dropdown-menu lang-dropdown" aria-labelledby="langDropdown">
+            <li><a class="dropdown-item" href="https://proseo.tech/">EN</a></li>
+            <li><a class="dropdown-item" href="https://proseo.tech/nl/">NL</a></li>
+          </ul>
+        </li>
+
+        <!-- Call-to-action knop -->
+        <li class="nav-item">
+          <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold"
+             href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
+             target="_blank">
+            Use Pro SEO Assistant
+          </a>
+        </li>
+      </ul>
     </div>
-    </nav>
+  </div>
+</nav>
+
     <!-- ✅ Content -->
     <div class="container pt-5">
         <div class="page-header" id="banner">
