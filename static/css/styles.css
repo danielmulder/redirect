@@ -16,7 +16,7 @@ p {
 .dropdown-menu {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 245px !important;
+    width: 345px !important;
     white-space: nowrap !important;
 }
 
@@ -262,3 +262,131 @@ th {
 .navbar-dark .navbar-toggler-icon {
   background-color: #transparant;
 }
+
+/* Styles shared-chat-sessions.html */
+
+.custom-card {
+    background-color: #2a2b2d;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+}
+
+.custom-card-body {
+    padding: 20px;
+}
+
+.custom-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.custom-card-subtitle {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.custom-card-text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.custom-card-link {
+    color: #66b2ff;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.custom-card-link:hover {
+    text-decoration: underline;
+}
+/* ✅ Intro-box styling */
+.intro-box {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-left: 5px solid #66b2ff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.intro-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* ✅ Card styling */
+/* ✅ Intro-box styling */
+.intro-box {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-left: 5px solid #66b2ff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.intro-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* ✅ Card styling */
+.custom-card {
+    background-color: #2a2b2d;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+}
+
+.custom-card-body {
+    padding: 20px;
+}
+
+.custom-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.custom-card-subtitle {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.custom-card-text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.custom-card-link {
+    color: #66b2ff;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.custom-card-link:hover {
+    text-decoration: underline;
+}
+
