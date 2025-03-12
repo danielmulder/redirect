@@ -7,7 +7,6 @@ from flask import Flask, jsonify, render_template, redirect, request, send_from_
 from datetime import datetime
 
 app = Flask(__name__)
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 # 🔥 Decorator voor opschonen van JSON en tekst
 def clean_data(func):
@@ -87,7 +86,6 @@ def get_sessions():
     )
 
     return jsonify(sessions)
-
 
 
 @app.route('/')
