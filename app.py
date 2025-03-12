@@ -3,7 +3,7 @@ import os
 import re
 import json
 from flask import Flask, jsonify, render_template, redirect, request, send_from_directory
-from flask_caching import Cache
+#rom flask_caching import Cache
 from datetime import datetime
 
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def clean_and_truncate(text, length=200):
 
 # ✅ Route voor gedeelde sessies
 @app.route('/shared-chat-sessions')
-@cache.cached(timeout=60)
+#@cache.cached(timeout=60)
 def shared_chat_sessions():
     with open('data/sessions.json', 'r', encoding='utf-8') as f:
         sessions = json.load(f)
@@ -69,7 +69,7 @@ def shared_chat_sessions():
 
 # ✅ Route voor ophalen van sessies
 @app.route('/sessions')
-@cache.cached(timeout=60)
+#@cache.cached(timeout=60)
 def get_sessions():
     with open('data/sessions.json', 'r', encoding='utf-8') as f:
         sessions = json.load(f)
@@ -91,26 +91,26 @@ def get_sessions():
 
 
 @app.route('/')
-@cache.cached(timeout=60)  # Cache voor 60 seconden
+#@cache.cached(timeout=60)  # Cache voor 60 seconden
 def home():
     return render_template("index.html")
 
 
 @app.route('/nl/')
-@cache.cached(timeout=60)  # Cache voor 60 seconden
+#@cache.cached(timeout=60)  # Cache voor 60 seconden
 def home_nl():
     return render_template("nl/index.html")
 
 
 @app.route('/robots.txt')
-@cache.cached(timeout=60)  # Cache voor 60 seconden
+#@cache.cached(timeout=60)  # Cache voor 60 seconden
 def robots():
     """Serveert robots.txt als statisch bestand"""
     return send_from_directory('static', 'robots.txt')
 
 
 @app.route('/sitemap.xml')
-@cache.cached(timeout=60)  # Cache voor 60 seconden
+#@cache.cached(timeout=60)  # Cache voor 60 seconden
 def sitemap():
     """Serveert sitemap.xml als statisch bestand"""
     return send_from_directory('static', 'sitemap.xml')
