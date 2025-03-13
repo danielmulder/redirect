@@ -1,3 +1,4 @@
+/* ✅ Algemene body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #060606;
@@ -5,82 +6,29 @@ body {
     margin-top: 32px;
 }
 
+/* ✅ Tekst styling */
 p {
     color: #adafae !important;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 16px;
+}
+
+/* ✅ Logo styling */
+#logo_nav {
+    width: 48px !important;
+    height: 48px !important;
 }
 
 .logo-text {
     font-size: 20px;
 }
 
-.dropdown-menu {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 345px !important;
-    white-space: nowrap !important;
-}
-
-.lang-dropdown {
-  min-width: 100px;
-  width: auto;
-  padding-right: 20px;
-}
-
-.dropdown-menu .dropdown-item {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.list-group {
-    --bs-list-group-color: #fff !important;
-    --bs-list-group-bg: #222 !important;
-    --bs-list-group-border-color: #282828 !important;
-    --bs-list-group-border-width: var(--bs-border-width) !important;
-    --bs-list-group-border-radius: var(--bs-border-radius) !important;
-    --bs-list-group-item-padding-x: 1rem !important;
-    --bs-list-group-item-padding-y: 0.5rem !important;
-    --bs-list-group-action-color: #fff !important;
-    --bs-list-group-action-hover-color: var(--bs-emphasis-color) !important;
-    --bs-list-group-action-hover-bg: #2a9fd6 !important;
-    --bs-list-group-action-active-color: var(--bs-body-color) !important;
-    --bs-list-group-action-active-bg: #2a9fd6 !important;
-    --bs-list-group-disabled-color: var(--bs-secondary-color) !important;
-    --bs-list-group-disabled-bg: #282828 !important;
-    --bs-list-group-active-color: #fff !important;
-    --bs-list-group-active-bg: #2a9fd6 !important;
-    --bs-list-group-active-border-color: #2a9fd6 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    padding-left: 0 !important;
-    margin-bottom: 25px !important;
-    border-radius: var(--bs-list-group-border-radius) !important;
-}
-
-.list-group-item {
-    background-color: #3d3c3c !important;
-    border: none !important; /* Verwijder de border */
-    color: white !important;
-    padding: 10px 15px 4px !important; /* Padding */
-    transition: background-color 0.3s ease !important;
-}
-
-.list-group-item:hover {
-    background-color: #222 !important;
-}
-
-.list-group-item::marker {
-    content: '\2705' !important; /* Groene vinkjes */
-    color: green !important;
-}
-
-.img-fluid {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-/* Navbar styling */
+/* ✅ Navbar styling */
 .navbar {
     background-color: #007bff;
     padding: 10px 0;
@@ -100,11 +48,10 @@ p {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    /*color: #FFD700 !important;*/
     border-bottom: 2px solid white;
 }
 
-/* Responsive navbar adjustments */
+/* ✅ Responsive navbar */
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
@@ -112,58 +59,163 @@ p {
 
     .navbar-collapse {
         background: #0a74da;
-        padding: 10px;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        padding: 20px;
         margin-top: 10px;
         border-radius: 8px;
     }
 }
 
-/* Text block section styling */
-.text-block-section {
-    background: #1c1c1c;
-    padding: 25px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
-    color: #ddd;
+/* ✅ Dropdown menu */
+.dropdown-menu {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 345px !important;
 }
 
-.text-block-section h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-    display: flex;
+.dropdown-menu .dropdown-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.lang-dropdown {
+    min-width: 100px;
+    padding-right: 20px;
+}
+
+/* ✅ Algemene card styling */
+.custom-card {
+    background-color: #2a2b2d;
+    border: 1px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 12px; /* ✅ Extra ruimte tussen de cards */
+    padding-bottom: 16px; /* ✅ Extra padding onderaan */
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ✅ Afbeelding styling */
+.session-image {
+    position: relative;
+}
+
+.session-image img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    border-bottom: 1px solid #444;
+}
+
+.session-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.68); /* ✅ 20% transparante overlay */
+}
+
+/* ✅ Tekstgedeelte styling */
+.custom-card-body {
+    padding: 20px; /* ✅ Extra padding voor ademruimte */
+}
+
+/* ✅ Titel styling */
+.custom-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 4px; /* ✅ Dichtbij de datum plaatsen */
+    color: #ffffff;
+}
+
+/* ✅ URL styling */
+.custom-card-url a {
+    color: #66b2ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.custom-card-url a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Datum styling */
+.custom-card-subtitle {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 16px; /* ✅ Extra ruimte na de datum */
+}
+
+/* ✅ Beschrijving styling */
+.custom-card-text {
+    font-size: 17px; /* ✅ Iets meer body geven */
+    color: #ccc;
+    line-height: 1.7; /* ✅ Meer ademruimte */
+    margin-bottom: 24px; /* ✅ Extra ruimte onder de beschrijving */
+}
+
+/* ✅ Facebook knop aanpassen naar tekstlink met icon */
+.facebook-share-btn {
+    background: none;
+    color: #66b2ff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
     align-items: center;
 }
 
-.text-block-section h2 img {
-    height: 20px;
-    margin-right: 8px;
+.facebook-share-btn:hover {
+    text-decoration: underline;
 }
 
-.lead {
-    padding-top: 10px;
-    padding-bottom: 16px;
+.facebook-share-btn i {
+    margin-right: 6px;
 }
 
-.text-block-section code {
-    background: rgba(255, 255, 255, 0.1);
-    color: #4CAF50;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
+/* ✅ Link styling */
+.custom-card-link {
+    color: #66b2ff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 12px;
 }
 
-.text-block-section p {
-    color: white;
-    line-height: 1.7;
+.custom-card-link:hover {
+    text-decoration: underline;
+}
+
+/* ✅ Intro-box styling */
+.intro-box {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-left: 5px solid #66b2ff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
     margin-bottom: 12px;
 }
 
-/* Button styles */
+.intro-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* ✅ Button styling */
 .custom-btn {
     padding: 10px 16px;
     font-weight: bold;
@@ -175,218 +227,48 @@ p {
     background-color: #0056b3;
 }
 
-/* Card styling */
-.card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* List group styling */
-.list-group-item {
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    background: #ffffff;
-    transition: all 0.3s ease-in-out;
-}
-
-.list-group-item:hover {
-    background: #f0f0f0;
-}
-
-/* Header styling */
-h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 16px;
-}
-
-/* Table styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td, th {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-/* Footer styling */
+/* ✅ Footer styling */
 .footer {
     text-align: center;
-    padding-top: 1rem !important;
-    padding-bottom: 0rem !important;
+    padding-top: 1rem;
     background-color: #343a40;
     color: white;
 }
 
-/* Logo styling */
-#logo_nav {
-    width: 48px !important; /* Toegevoegd: logo formaat aanpassen */
-    height: 48px !important; /* Toegevoegd: logo formaat aanpassen */
-    /* max-width: none !important; /* Toegevoegd: overschrijft inline style
-    max-height: none !important; /* Toegevoegd: overschrijft inline style */
-}
-
-/* Overige styles */
-.title {
-    color: green;
-}
-
-.section {
-    padding: 20px 0;
-    margin-bottom: 20px;
-}
-
+/* ✅ Fab button */
 .offcanvas-fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2000; /* Zorgt dat de knop boven andere elementen blijft */
-  border-radius: 50%;
-  padding: 10px 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-/* Als je een donker thema hebt en een witte navbar-toggler-icon wil tonen: */
-.navbar-dark .navbar-toggler-icon {
-  background-color: #transparant;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000;
+    border-radius: 50%;
+    padding: 10px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Styles shared-chat-sessions.html */
-
-.custom-card {
-    background-color: #2a2b2d;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease-in-out;
+.header-image img {
+    height: 350px; /* Pas dit aan afhankelijk van de gewenste hoogte */
+    width: 100%; /* Zorg dat de afbeelding zich volledig uitrekt */
+    object-fit: cover; /* Zorgt dat de afbeelding zichzelf schaalt zonder uitrekken */
 }
 
-.custom-card:hover {
-    transform: translateY(-4px);
+.header-title {
+    margin-top: 20px; /* Pas dit aan voor meer of minder ruimte */
+    font-size: 1.5rem; /* Optioneel: Titel iets groter maken voor betere leesbaarheid */
 }
 
-.custom-card-body {
-    padding: 20px;
-}
-
-.custom-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.custom-card-subtitle {
-    font-size: 1rem;
-    color: #bbb;
-}
-
-.custom-card-text {
-    font-size: 1rem;
-    margin-bottom: 12px;
-}
-
-.custom-card-link {
-    color: #66b2ff;
-    text-decoration: none;
-    margin-right: 12px;
-}
-
-.custom-card-link:hover {
-    text-decoration: underline;
-}
-/* ✅ Intro-box styling */
 .intro-box {
-    background-color: #1e1e1e;
-    padding: 24px;
-    border-left: 5px solid #66b2ff;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: 32px !important; /* Pas dit aan voor meer of minder ruimte */
+    font-size: 1.5rem; /* Optioneel: Titel iets groter maken voor betere leesbaarheid */
 }
 
-.intro-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-.intro-text {
-    font-size: 1rem;
-    color: #bbb;
-}
-
-/* ✅ Card styling */
-/* ✅ Intro-box styling */
-.intro-box {
-    background-color: #1e1e1e;
-    padding: 24px;
-    border-left: 5px solid #66b2ff;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.intro-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-.intro-text {
-    font-size: 1rem;
-    color: #bbb;
-}
-
-/* ✅ Card styling */
-.custom-card {
-    background-color: #2a2b2d;
-    color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease-in-out;
-}
-
-.custom-card:hover {
-    transform: translateY(-4px);
-}
-
-.custom-card-body {
-    padding: 20px;
-}
-
-.custom-card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.custom-card-subtitle {
-    font-size: 1rem;
-    color: #bbb;
-}
-
-.custom-card-text {
-    font-size: 1rem;
-    margin-bottom: 12px;
-}
-
-.custom-card-link {
-    color: #66b2ff;
-    text-decoration: none;
-    margin-right: 12px;
-}
-
-.custom-card-link:hover {
-    text-decoration: underline;
+@media (max-width: 768px) {
+    .header-image img {
+        height: 220px; /* Kleiner maken voor kleinere schermen */
+    }
+    .header-title {
+        font-size: 1.25rem;
+        margin-top: 15px;
+    }
 }
 

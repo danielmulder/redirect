@@ -1,62 +1,98 @@
 [
     {
-        "title": "\"\\ud83d\\ude80 SEO Audit Rapport \\u2013 Optimus Online\"",
-        "date": "2025-03-12",
+        "title": "🥁 SEO Audit Rapport Optimus Online",
+        "date": "2025-03-09",
         "description": "\"\\ud83d\\udd39 SEO Score & Prioriteiten Totale SEO Score: 78/100 \\u2705 Sterke punten: \\u2714\\ufe0f Goed gebruik van meta title en meta description. \\u2714\\ufe0f Sterke keyword strategie met duidelijk gedefinieerde bigrams en trigrams....\"",
-        "url": "\"https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant/c/67ced67e-8450-8009-a3d4-0b331c7e91d4\""
+        "url": "\"https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant/c/67ced67e-8450-8009-a3d4-0b331c7e91d4\"",
+        "target_url": "https://optimusonline.nl/",
+        "og_img": "/static/screenshots/optimusonline_nl_scrshot_desktop.png"
     },
     {
         "title": "🔗 Link Metrics Report – Heaven Media",
-        "date": "2025-03-12",
+        "date": "2025-03-09",
         "description": "🔹 Conclusion & Action Items ✅ Strengths: ✔ Strong internal linking structure ✔ Well-organized service pages with deep linking ✔ Minimal external linking, reducing SEO dilution ⚠ Improvement Areas: 🚀...",
-        "url": "https://chatgpt.com/share/67c906c2-1e1c-8009-9e43-ecbfefae7ef7"
+        "url": "https://chatgpt.com/share/67c906c2-1e1c-8009-9e43-ecbfefae7ef7",
+        "target_url": "https://heavenmedia.com/",
+        "og_img": "/static/screenshots/heavenmedia_com_scrshot_desktop.png"
     },
     {
-        "title": "🌍 SEO Audit Report – Optimus Online",
-        "date": "2025-03-12",
+        "title": "📝 Keyword Analysis - Rapport Optimus Online",
+        "date": "2025-02-27",
         "description": "🔹 SEO Samenvatting Optimus Online heeft een solide basis op het gebied van SEO, maar er zijn enkele verbeterpunten. De meta description en titel zijn goed geoptimaliseerd qua lengte, maar er...",
-        "url": "https://chatgpt.com/share/67d11cc0-4cfc-8009-a8d8-3cac9232b0f1"
+        "url": "https://chatgpt.com/share/67d11cc0-4cfc-8009-a8d8-3cac9232b0f1",
+        "target_url": "https://optimusonline.nl/",
+        "og_img": "/static/screenshots/optimusonline_nl_scrshot_desktop.png"
     },
     {
-        "title": "Pro SEO Assistant Benchmark session",
-        "date": "2025-03-12",
+        "title": "⏱ Pro SEO Assistant Benchmark session",
+        "date": "2025-03-09",
         "description": "Generate a meta description (maximum 160 characters) for a blog post titled 'The Ultimate Guide to Growing Basil Indoors.' Focus on highlighting practical tips and ease of growing. Talked to...",
-        "url": "https://chatgpt.com/share/67d11d98-10f8-8009-a439-2482f2133414"
+        "url": "https://chatgpt.com/share/67d11d98-10f8-8009-a439-2482f2133414",
+        "target_url": "https://proseo.tech/",
+        "og_img": "/static/screenshots/proseo_tech_scrshot_desktop.png"
     },
     {
         "title": "🚀 On-Page SEO Audit Report – Kuras.nl",
         "date": "2025-03-12",
         "description": "🔹 Summary Kuras.nl is een goed gestructureerde website die zich richt op producten voor dak, wand en gevel. De site heeft een duidelijke meta title en description, maar mist geoptimaliseerde...",
-        "url": "https://chatgpt.com/share/67d11eab-678c-8009-990a-3ab9c4194205"
+        "url": "https://chatgpt.com/share/67d11eab-678c-8009-990a-3ab9c4194205",
+        "target_url": "https://kuras.nl/",
+        "og_img": "/static/screenshots/kuras_nl_scrshot_desktop.png"
     },
     {
         "title": "🚀 How to Get Started with SEO Assistant Pro",
-        "date": "2025-03-12",
-        "description": "Step 1: Understand the Core Functionalities Step 2: Learn the Structure of Each Report ✅ Step 3: Use Effective Prompts ✅ Step 4: Know the Key APIs",
-        "url": "https://chatgpt.com/share/67d11ed1-1c18-8009-84a2-63a5ed064e59"
+        "date": "2025-03-02",
+        "description": "🚀 Getting Started with SEO Assistant Pro 🎯 1. What is SEO Assistant Pro? SEO Assistant Pro is a modular, API-powered tool designed for comprehensive SEO analysis and op...",
+        "url": "https://chatgpt.com/share/67d11ed1-1c18-8009-84a2-63a5ed064e59",
+        "target_url": "https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant",
+        "og_img": "/static/screenshots/chatgpt_com_g_g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant_scrshot_desktop.png"
     },
     {
-        "title": "Multi-Page SEO Audit & Report for ProTrix.nl🔎",
-        "date": "2025-03-12",
+        "title": "📚 Multi-Page SEO Audit & Report for ProTrix.nl🔎",
+        "date": "2025-03-04",
         "description": "🚀 SEO Summary ProTrix.nl has a solid foundation in terms of content and keyword structure, but it suffers from missing security headers, inconsistent metadata, and a lack of proper alt tags on...",
-        "url": "https://chatgpt.com/share/67d1201e-a584-8009-ae5e-6d8ca24d78c7"
+        "url": "https://chatgpt.com/share/67d1201e-a584-8009-ae5e-6d8ca24d78c7",
+        "target_url": "https://protrix.nl/",
+        "og_img": "/static/screenshots/protrix_nl_scrshot_desktop.png"
     },
     {
         "title": "🚀 SEO Audit Report – Geldvoorelkaar.nl",
-        "date": "2025-03-12",
+        "date": "2025-03-11",
         "description": "📊 Total SEO Score: 78/100 Element Score (0-10) Status Meta Title 9 ✅ Correct Meta Description 9 ✅ Correct Structured Data 3 ❌ Ontbreekt Page Speed 7 🟢 Goed Alt Tags 4 ❌ Ontbreekt op sommige...",
-        "url": "https://chatgpt.com/share/67d12074-e6c4-8009-94d3-fd1ea1ebdc13"
+        "url": "https://chatgpt.com/share/67d12074-e6c4-8009-94d3-fd1ea1ebdc13",
+        "target_url": "https://www.geldvoorelkaar.nl/",
+        "og_img": "/static/screenshots/www_geldvoorelkaar_nl_scrshot_desktop.png"
     },
     {
         "title": "🌟 Core Web Vitals & Optimization Report",
-        "date": "2025-03-12",
+        "date": "2025-02-25",
         "description": "Metric Value Status Performance Score 93/100 ✅ Excellent First Contentful Paint (FCP) 1.8 s 🟢 Good Largest Contentful Paint (LCP) 2.7 s 🟢 Good First Input Delay (FID) 20 ms ✅ Excellent Cumulative...",
-        "url": "https://chatgpt.com/share/67d14173-2790-8009-8364-b117c2b4f03d"
+        "url": "https://chatgpt.com/share/67d14173-2790-8009-8364-b117c2b4f03d",
+        "target_url": "https://proseo.tech",
+        "og_img": "/static/screenshots/proseo_tech_scrshot_desktop.png"
     },
     {
         "title": "🚀 Technical SEO & Core Web Vitals Audit",
-        "date": "2025-03-12",
+        "date": "2025-02-23",
         "description": "🌐 Website: https://www.creditcard-vergelijk.nl✅ Performance Score: 100/100 (Excellent) Metric Value Status First Contentful Paint (FCP) 1.0 s ✅ Good Largest Contentful Paint (LCP) 1.7 s ✅ Good First...",
-        "url": "https://chatgpt.com/share/67d1425c-fa44-8009-8546-947d7aec2d8b"
+        "url": "https://chatgpt.com/share/67d1425c-fa44-8009-8546-947d7aec2d8b",
+        "target_url": "https://www.creditcard-vergelijk.nl",
+        "og_img": "/static/screenshots/www_creditcard-vergelijk_nl_scrshot_desktop.png"
+    },
+    {
+        "title": "✅ SEO Audit Report – Needmore Coffee Roasters",
+        "date": "2025-03-12",
+        "description": "🏆 SEO Summary Needmore Coffee Roasters has a solid foundation but shows weaknesses in meta descriptions, image optimization, and security configurations. Structured data is present but can be...",
+        "url": "https://chatgpt.com/share/67d184d3-11e4-8009-9077-28ce074d9a42",
+        "target_url": "https://needmoreroasters.com",
+        "og_img": "/static/screenshots/needmoreroasters_com_scrshot_desktop.png"
+    },
+    {
+        "title": "🌡Levant Barber Shop Full SEO Analysis",
+        "date": "2025-03-12",
+        "description": "🔥 Top Priority (Immediate Action Required) These issues have the biggest impact on rankings and user experience and should be resolved first: ✅ Improve Core Web Vitals First Contentful Paint (FCP) is...",
+        "url": "https://chatgpt.com/share/67d1b381-9cf0-8009-bed2-e1edc070e3f1",
+        "target_url": "https://levantbarbershop.com/",
+        "og_img": "/static/screenshots/www_labarbieredeparis_com_offres-speciales_shine-shaker_scrshot_desktop.png"
     }
 ]
