@@ -25,7 +25,7 @@ SCREENSHOT_PATH = "../static/screenshots"
 THUMBNAIL_SIZE = (400, 300)
 
 # ✅ Zorg dat de map bestaat
-os.makedirs(SCREENSHOT_PATH, exist_ok=True)
+#os.makedirs(SCREENSHOT_PATH, exist_ok=True)
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_PATH}'
