@@ -8,7 +8,8 @@
         <link rel="icon" type="image/png" href="https://proseo.tech/static/images/favicon.png">
     <meta name="description" content="Shared SEO Reports made with ChatGPT SEO tool Pro SEO Assistant GPT (Free) on chatgpt.com. Showcasing SEO AI tools features and capabilities. Try it today!">
     <!-- ✅ Canonical URL -->
-   <link rel="canonical" href="{{ url_for('shared_chat_sessions', _external=True) }}">
+   <a class="page-link" href="{{ url_for('pages.shared_chat_sessions', page=current_page-1, per_page=per_page) }}" tabindex="-1">&laquo;</a>
+
     <!-- ✅ Meta Robots Tag -->
     <meta name="robots" content="index, follow">
     <!-- Hreflang-tags for ENG (default) -->
@@ -75,50 +76,12 @@
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
     <!-- ✅ Stylesheets -->
-    <link media="all" rel="stylesheet" href="https://proseo.tech/static/css/bootstrap.css" />
+    <!-- Bootstrap CSS toevoegen -->
+    <link href="https://proseo.tech/static/css/bootstrap.css" rel="stylesheet">
     <link media="all" rel="stylesheet" href="/static/css/styles.css" />
 </head>
 <body>
-    <nav id="sticky-nav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <!-- ✅ Logo/Branding -->
-            <a class="navbar-brand" href="/">
-                <img id="logo_nav" src="https://proseo.tech/static/images/logo.svg" alt="Pro SEO Tech Logo">
-                <span class="logo-text">Pro SEO Assistant</span>
-            </a>
-
-            <!-- ✅ Toggle-button for small screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- ✅ Nav-items -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- ✅ Left side of nav -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if request.path == '/shared-chat-sessions' %}active{% endif %}" href="/shared-chat-sessions">
-                            Shared Chats
-                        </a>
-                    </li>
-                </ul>
-                <!-- ✅ Right side of nav menu) -->
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-light text-primary px-3 py-2 fw-bold"
-                           href="https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant"
-                           target="_blank">
-                            Use Pro SEO Assistant
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {{ render_nav() | safe }}
     <!-- Content -->
     <div class="container pt-5">
         <div class="page-header" id="banner">
@@ -128,7 +91,7 @@
     <div class="container mt-4">
         <!-- Intro-box -->
         <div class="intro-box mb-4">
-            <h1 class="intro-title">🗃 On-Page SEO Audits & Reports</h1>
+            <h1 class="intro-title">📈 On-Page SEO Audits & Reports</h1>
             <p class="intro-text">
                 A selection of the audits and reports made with the Pro SEO Assistant GPT are published on this page as showcases demonstrating the capabilities of the AI SEO Tool for ChatGPT. This feed makes the shared sessions available to you to explore yourself.
             </p>
@@ -168,26 +131,26 @@
             <ul class="pagination pagination-lg">
                 <!-- Previous button -->
                 <li class="page-item {% if current_page == 1 %}disabled{% endif %}">
-                    <a class="page-link" href="{{ url_for('shared_chat_sessions', page=current_page-1, per_page=per_page) }}" tabindex="-1">&laquo;</a>
+                    <a class="page-link" href="{{ url_for('pages.shared_chat_sessions', page=current_page-1, per_page=per_page) }}" tabindex="-1">&laquo;</a>
                 </li>
 
                 {% for i in range(1, total_pages + 1) %}
                     <li class="page-item {% if i == current_page %}active{% endif %}">
-                        <a class="page-link" href="{{ url_for('shared_chat_sessions', page=i, per_page=per_page) }}">{{ i }}</a>
+                        <a class="page-link" href="{{ url_for('pages.shared_chat_sessions', page=i, per_page=per_page) }}">{{ i }}</a>
                     </li>
                 {% endfor %}
 
                 <!-- Next button -->
                 <li class="page-item {% if current_page == total_pages %}disabled{% endif %}">
-                    <a class="page-link" href="{{ url_for('shared_chat_sessions', page=current_page+1, per_page=per_page) }}">&raquo;</a>
+                    <a class="page-link" href="{{ url_for('pages.shared_chat_sessions', page=current_page+1, per_page=per_page) }}">&raquo;</a>
                 </li>
             </ul>
         </div>
         {% endif %}
 
-
     </div>
     <!-- end main -->
+    </div>
     <!-- Footer Section -->
     <footer id="footer" class="bg-light text-center py-3 mt-5">
         <p>&copy; 2025 Pro SEO Assistant | All rights reserved | AI SEO Tool for ChatGPT |
@@ -200,6 +163,5 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/body_close.js') }}"></script>
     <script src="{{ url_for('static', filename='js/share.js') }}"></script>
-    </div>
 </body>
 </html>

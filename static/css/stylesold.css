@@ -96,7 +96,7 @@ p {
 }
 
 .navbar-nav .nav-link {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     color: white !important;
     transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
@@ -152,7 +152,6 @@ p {
 .lead {
     padding-top: 10px;
     padding-bottom: 16px;
-    color: #adafae;
 }
 
 .text-block-section code {
@@ -160,7 +159,7 @@ p {
     color: #4CAF50;
     padding: 2px 6px;
     border-radius: 4px;
-    font-size: 17px;
+    font-size: 0.9em;
 }
 
 .text-block-section p {
@@ -195,7 +194,7 @@ p {
 .list-group-item {
     border: none;
     padding: 12px 20px;
-    font-size: 17px;
+    font-size: 16px;
     background: #ffffff;
     transition: all 0.3s ease-in-out;
 }
@@ -269,124 +268,55 @@ th {
   background-color: #transparant;
 }
 
-/* ✅ Actieve link styling */
-.dropdown-item.active {
-    font-weight: bold;
-    color: #007bff !important;
-    background-color: #f8f9fa !important;
-    border-bottom: 2px solid #007bff;
-}
+/* Styles shared-chat-sessions.html */
 
-/* ✅ Algemene card styling */
 .custom-card {
     background-color: #2a2b2d;
-    border: 1px solid #444;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: transform 0.2s ease-in-out;
-    margin-bottom: 12px; /* ✅ Extra ruimte tussen de cards */
-    padding-bottom: 16px; /* ✅ Extra padding onderaan */
 }
 
 .custom-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-/* ✅ Afbeelding styling */
-.session-image {
-    position: relative;
-}
-
-.session-image img {
-    width: 100%;
-    height: 200px;
-    display: block;
-    object-fit: cover;
-    border-bottom: 1px solid #444;
-}
-
-.session-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(34, 34, 34, 0.68); /* ✅ 20% transparante overlay */
-}
-
-/* ✅ Tekstgedeelte styling */
 .custom-card-body {
-    padding: 20px; /* ✅ Extra padding voor ademruimte */
+    padding: 20px;
 }
 
-/* ✅ Titel styling */
 .custom-card-title {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 4px; /* ✅ Dichtbij de datum plaatsen */
-    color: #ffffff;
 }
 
-/* ✅ URL styling */
-.custom-card-url a {
-    color: #66b2ff;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.custom-card-url a:hover {
-    text-decoration: underline;
-}
-
-/* ✅ Datum styling */
 .custom-card-subtitle {
-    font-size: 14px;
+    font-size: 1rem;
     color: #bbb;
-    margin-bottom: 16px; /* ✅ Extra ruimte na de datum */
 }
 
-/* ✅ Beschrijving styling */
 .custom-card-text {
-    font-size: 17px; /* ✅ Iets meer body geven */
-    color: #ccc;
-    line-height: 1.7; /* ✅ Meer ademruimte */
-    margin-bottom: 24px; /* ✅ Extra ruimte onder de beschrijving */
+    font-size: 1rem;
+    margin-bottom: 12px;
 }
 
-/* ✅ Facebook knop aanpassen naar tekstlink met icon */
-.facebook-share-btn {
-    background: none;
-    color: #66b2ff;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-}
-
-.facebook-share-btn:hover {
-    text-decoration: underline;
-}
-
-.facebook-share-btn i {
-    margin-right: 6px;
-}
-
-/* ✅ Link styling */
 .custom-card-link {
     color: #66b2ff;
     text-decoration: none;
-    font-weight: 500;
     margin-right: 12px;
 }
 
 .custom-card-link:hover {
     text-decoration: underline;
+}
+/* ✅ Intro-box styling */
+.intro-box {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-left: 5px solid #66b2ff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .intro-title {
@@ -401,14 +331,66 @@ th {
     color: #bbb;
 }
 
-/* ✅ Button styling */
-.custom-btn {
-    padding: 10px 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+/* ✅ Card styling */
+/* ✅ Intro-box styling */
+.intro-box {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-left: 5px solid #66b2ff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.custom-btn:hover {
-    background-color: #0056b3;
+.intro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
 }
+
+.intro-text {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* ✅ Card styling */
+.custom-card {
+    background-color: #2a2b2d;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+}
+
+.custom-card-body {
+    padding: 20px;
+}
+
+.custom-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.custom-card-subtitle {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.custom-card-text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.custom-card-link {
+    color: #66b2ff;
+    text-decoration: none;
+    margin-right: 12px;
+}
+.custom-card-link:hover {
+    text-decoration: underline;
+}
+

@@ -5,20 +5,29 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.dropdown-item[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
+
+      // Alle links resetten
+      document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Voeg 'active' toe aan de aangeklikte link
+      this.classList.add('active');
+
       navTrigger.textContent = this.textContent; // Update de navTrigger-tekst
       const targetId = this.getAttribute('href').substring(1);
       const targetEl = document.getElementById(targetId);
       if (targetEl) {
         targetEl.scrollIntoView({ behavior: 'smooth' });
       }
+
       // Optioneel: sluit de dropdown
       const dd = bootstrap.Dropdown.getOrCreateInstance(navTrigger);
       dd.hide();
     });
   });
 
-  // 2) Intersection Observer: sectie in beeld => update navTrigger
-  // Mapping van ID -> label (zoals in je dropdown)
+  // 2) Intersection Observer: sectie in beeld => update navTrigger + actieve link
   const sectionMap = {
     'index': 'Index',
     'page_auditor-onpage_audit': 'SEO Audits',
@@ -42,6 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const id = entry.target.id;
         if (sectionMap[id]) {
           navTrigger.textContent = sectionMap[id];
+
+          // Reset de actieve status voor alle links
+          document.querySelectorAll('.dropdown-item').forEach(link => {
+            link.classList.remove('active');
+          });
+
+          // Voeg 'active' toe aan de juiste link
+          const activeLink = document.querySelector(`.dropdown-item[href="#${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
         }
       }
     });
