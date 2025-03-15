@@ -1,1 +1,1 @@
-web: python app.py
+web: gunicorn app:create_app --bind 0.0.0.0:8080
