@@ -1,5 +1,4 @@
 import os
-import re
 import json
 import logging
 from flask import Flask, jsonify, render_template, redirect, request, send_from_directory
@@ -7,7 +6,6 @@ from models.model import db
 from includes.auth import authenticate_request
 from routers.pages_router import pages_router
 from includes.utils_class import clean_and_truncate, parse_date
-from routers.pages_router import pages_router
 from templates.partials.footer import render_footer
 
 logging.basicConfig(level=logging.INFO)
@@ -70,11 +68,4 @@ def create_app():
             return redirect("https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant", code=301)
         return "This is the Shark App", 200
 
-    return app  # Hier stopt de functie nu correct!
-
-
-# ✅ App starten
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
-    app = create_app()
-    app.run(host='127.0.0.1', port=port, debug=True)
+    return app
