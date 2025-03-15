@@ -4,6 +4,7 @@ from flask.blueprints import Blueprint
 from models.model import db, SessionFeed
 from templates.partials.footer import render_footer
 from templates.partials.nav_menu import render_nav
+from templates.partials.scripts_body_close import render_scripts_body_close
 
 pages_router = Blueprint('pages', __name__)
 
@@ -51,6 +52,6 @@ def inject_footer():
 def inject_nav():
     return dict(render_nav=render_nav)
 
-@pages_router.route('/test')
-def test():
-    return render_template('test.html', user='Daniel')
+@pages_router.context_processor
+def inject_render_scripts_body_close():
+    return dict(render_scripts_body_close=render_scripts_body_close)

@@ -5,8 +5,7 @@ from flask import Flask, jsonify, render_template, redirect, request, send_from_
 from models.model import db
 from includes.auth import authenticate_request
 from routers.pages_router import pages_router
-from includes.utils_class import clean_and_truncate, parse_date
-from templates.partials.footer import render_footer
+from routers.feeds_router import feeds_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -28,31 +27,12 @@ def create_app():
 
     # Register blueprints for each API module
     app.register_blueprint(pages_router)
+    app.register_blueprint(feeds_router, url_prefix="/feeds")
 
     db.init_app(app)
 
     with app.app_context():
         db.create_all()
-
-    # ✅ Route voor ophalen van sessies
-    @app.route('/sessions')
-    def get_sessions():
-        with open('data/sessions.json', 'r', encoding='utf-8') as f:
-            sessions = json.load(f)
-
-        for session in sessions:
-            if 'description' in session:
-                session['description'] = clean_and_truncate(session['description'])
-
-            if 'date' in session:
-                session['date'] = parse_date(session['date'])
-
-        sessions = sorted(
-            [s for s in sessions if s.get('date')],
-            key=lambda x: x['date'],
-            reverse=True
-        )
-        return jsonify(sessions)
 
     @app.route('/robots.txt')
     def robots():
@@ -62,10 +42,10 @@ def create_app():
     def sitemap():
         return send_from_directory('static', 'sitemap.xml')
 
-    @app.route('/<path:path>')
-    def catch_all(path):
-        if request.host == "gpt.proseo.tech":
-            return redirect("https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant", code=301)
-        return "This is the Shark App", 200
+    # @app.route('/<path:path>')
+    #def catch_all(path):
+    #    if request.host == "gpt.proseo.tech":
+    #        return redirect("https://chatgpt.com/g/g-67a9c0b376d881918b85c637d77761f0-pro-seo-assistant", code=301)
+    #    return "This is the Shark App", 200
 
     return app

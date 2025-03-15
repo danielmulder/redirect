@@ -1,141 +1,187 @@
 import os
-import json
 import re
-import logging
-import random
+import time
+import functools
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from PIL import Image
+import logging
+from models.model import db, SessionFeed
+from app import create_app
 
-# ✅ Logging instellen
+# ✅ Loggen instellen
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# ✅ Proxy-lijst (VS)
-PROXIES = [
-    "http://23.95.255.103:6687",
-    "http://31.58.10.48:6016",
-    "http://31.58.10.190:6158",
-    "http://45.38.70.131:7069",
-    "http://104.168.8.85:5538",
-]
+# ✅ Pad voor screenshots
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+SCREENSHOT_PATH = os.path.join(BASE_DIR, '..', 'static', 'screenshots')
+THUMBNAIL_SIZE = (400, 300)
 
-# ✅ Paden voor opslag
-SCREENSHOT_DIR = os.path.join('static', 'screenshots')
-os.makedirs(SCREENSHOT_DIR, exist_ok=True)
+os.makedirs(SCREENSHOT_PATH, exist_ok=True)
 
-# ✅ Pad naar JSON-bestand
-FILE_PATH = 'data/sessions.json'
-
-
-# ✅ Functie om geldige URL te controleren
-def validate_url(url):
-    return re.match(r'https?://[\w.-]+(?:\.[\w.-]+)+[/#?]?.*', url) is not None
-
-
-# ✅ Functie om screenshot + thumbnail te genereren
-def generate_screenshot(url, filename_prefix):
+# ✅ Valid date parser
+def parse_date(date_str):
     try:
-        # Proxy instellen
-        proxy = random.choice(PROXIES)
-        logger.info(f"🌐 Gebruikte proxy: {proxy}")
+        parsed_time = time.strptime(date_str, '%Y-%m-%d')
+        # ✅ Omdraaien naar datetime object voor SQLAlchemy
+        return datetime(
+            year=parsed_time.tm_year,
+            month=parsed_time.tm_mon,
+            day=parsed_time.tm_mday
+        )
+    except (ValueError, TypeError):
+        return None
 
+# ✅ Bestandsnaam genereren functie
+def generate_filename(url, suffix):
+    url_clean = re.sub(r'^https?:\/\/', '', url)
+    filename = re.sub(r'[^\w\-_]', '_', url_clean)
+    filename = filename.strip('_')
+    return f"{filename}_{suffix}_desktop.png"
+
+# ✅ Screenshot + thumbnail maken functie
+def take_screenshot(driver, url):
+    try:
+        screenshot_filename = generate_filename(url, 'scrshot')
+        thumbnail_filename = generate_filename(url, 'thumb')
+
+        screenshot_file = os.path.join(SCREENSHOT_PATH, screenshot_filename)
+        thumbnail_file = os.path.join(SCREENSHOT_PATH, thumbnail_filename)
+
+        # ✅ Screenshot maken en bestand overschrijven als het al bestaat
+        driver.save_screenshot(screenshot_file)
+        logger.info(f"📸 Screenshot opgeslagen als: {screenshot_file}")
+
+        # ✅ Thumbnail genereren met Pillow
+        with Image.open(screenshot_file) as img:
+            img.thumbnail(THUMBNAIL_SIZE)
+            img.save(thumbnail_file)
+            logger.info(f"🖼️ Thumbnail opgeslagen als: {thumbnail_file}")
+
+        # ✅ Geef de volledige URL terug voor gebruik in JSON
+        return (
+            f"https://proseo.tech/static/screenshots/{screenshot_filename}",
+            f"https://proseo.tech/static/screenshots/{thumbnail_filename}"
+        )
+
+    except Exception as e:
+        logger.error(f"❌ Fout bij het maken van screenshot: {e}")
+        return None, None
+
+# ✅ Pagina renderen en screenshot maken
+def render_and_capture(url):
+    try:
         chrome_options = Options()
-        chrome_options.add_argument(f"--proxy-server={proxy}")
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-gpu")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--window-size=1920,1080")
 
-        # ✅ Chrome starten
-        service = ChromeService()
-        driver = webdriver.Chrome(service=service, options=chrome_options)
-
-        # ✅ User-Agent instellen
         user_agent = (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
             "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
         )
         chrome_options.add_argument(f'user-agent={user_agent}')
 
-        # ✅ Pagina ophalen
-        logger.info(f"🌍 URL openen: {url}")
+        service = ChromeService()
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+
+        logger.info(f"🌐 Openen van URL: {url}")
         driver.get(url)
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.TAG_NAME, "body"))
-        )
 
-        # ✅ Bestandsnamen bepalen
-        screenshot_file = os.path.join(SCREENSHOT_DIR, f"{filename_prefix}_scrshot_desktop.png")
-        thumb_file = os.path.join(SCREENSHOT_DIR, f"{filename_prefix}_thumb_desktop.png")
+        preview_image, thumbnail = take_screenshot(driver, url)
 
-        # ✅ Screenshot maken
-        logger.info(f"📸 Screenshot opslaan als: {screenshot_file}")
-        driver.save_screenshot(screenshot_file)
+        driver.quit()
 
-        # ✅ Thumbnail maken (gebruik PIL)
-        from PIL import Image
-        image = Image.open(screenshot_file)
-        image.thumbnail((400, 300))  # Thumbnail formaat
-        image.save(thumb_file)
-
-        logger.info(f"🖼️ Thumbnail opgeslagen als: {thumb_file}")
-
-        return screenshot_file.replace("\\", "/")
+        return preview_image, thumbnail
 
     except Exception as e:
         logger.error(f"❌ Fout bij het renderen van {url}: {e}")
-        return None
+        return None, None
 
-    finally:
-        if driver:
-            driver.quit()
+# ✅ Decorator voor opschonen van tekst
+def clean_data(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
 
+        if isinstance(result, list):
+            cleaned_result = [
+                {k: re.sub(r'\s+', ' ', str(v).strip()) if isinstance(v, str) else v for k, v in item.items()}
+                for item in result
+            ]
+            return cleaned_result
+        elif isinstance(result, str):
+            return re.sub(r'\s+', ' ', result.strip())
+        else:
+            return result
+    return wrapper
 
-# ✅ JSON updaten met screenshot URL
-def update_json():
-    if not os.path.exists(FILE_PATH):
-        logger.error("❌ JSON-bestand niet gevonden!")
-        return
+# ✅ Clean en afkappen tekst
+@clean_data
+def clean_and_truncate(text, length=200):
+    if len(text) > length:
+        truncated = text[:length].rsplit(' ', 1)[0] + '...'
+        return truncated
+    return text
 
-    with open(FILE_PATH, 'r', encoding='utf-8') as file:
-        try:
-            data = json.load(file)
-        except json.JSONDecodeError:
-            logger.error("❌ Ongeldig JSON-bestand!")
-            return
+# ✅ Flask context activeren
+app = create_app()
+with app.app_context():
+    # ✅ Prompt voor invoer
+    title = input('Titel: ').strip()
 
-    updated = False
+    # ✅ Datum invoeren
+    date_str = input('Datum (YYYY-MM-DD): ').strip()
+    date = parse_date(date_str)
+    if not date:
+        print("❌ Ongeldige datum! Probeer opnieuw.")
+        exit(1)
 
-    for item in data:
-        target_url = item.get('target_url')
-        if target_url:
-            logger.info(f"🔎 Screenshot genereren voor: {target_url}")
+    # ✅ Beschrijving invoeren
+    print('Voer beschrijving in (typ "END" op een nieuwe regel om te stoppen):')
+    description_lines = []
+    while True:
+        line = input()
+        if line.strip().upper() == 'END':
+            break
+        description_lines.append(line.strip())
+    description = ' '.join(description_lines).strip()
 
-            # ✅ Bestandsnaam afleiden uit URL
-            filename_prefix = target_url.replace('https://', '').replace('http://', '').replace('/', '_').replace('.',
-                                                                                                                  '_')
+    # ✅ Invoer voor URL (hoofdlijst-url)
+    url = input('Voer de hoofd-URL in: ').strip()
+    target_url = input('Voer de target URL in (optioneel): ').strip()
 
-            # ✅ Screenshot genereren
-            screenshot_path = generate_screenshot(target_url, filename_prefix)
+    # ✅ Screenshot genereren
+    preview_image, thumbnail = None, None
+    if target_url:
+        logger.info(f"🌐 Genereren van screenshot voor {target_url}")
+        preview_image, thumbnail = render_and_capture(target_url)
 
-            if screenshot_path:
-                item['og_img'] = f"/{screenshot_path}"  # 🔥 Bestandspad toevoegen aan JSON
-                updated = True
-                logger.info(f"✅ Screenshot toegevoegd aan record: {screenshot_path}")
+    if not preview_image or not thumbnail:
+        logger.error("❌ Screenshot mislukt, record wordt NIET opgeslagen.")
+        exit(1)
 
-    if updated:
-        with open(FILE_PATH, 'w', encoding='utf-8') as file:
-            json.dump(data, file, indent=4, ensure_ascii=False)
-            logger.info("✅ JSON-bestand bijgewerkt!")
+    # ✅ Record aanmaken
+    try:
+        new_session = SessionFeed(
+            created_at=date,
+            share_link=url,
+            target_link=target_url if target_url else None,
+            report_title=title,
+            summary=description,
+            preview_image=preview_image,
+            thumbnail=thumbnail
+        )
+        db.session.add(new_session)
+        db.session.commit()
+        logger.info("✅ Record toegevoegd aan de database!")
 
+    except Exception as e:
+        logger.error(f"❌ Fout bij opslaan in database: {e}")
+        db.session.rollback()
 
-# ✅ Hoofdprogramma
-if __name__ == "__main__":
-    logger.info("🚀 Start JSON update en screenshot generatie...")
-    update_json()
-    logger.info("✅ JSON update voltooid!")

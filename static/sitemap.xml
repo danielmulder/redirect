@@ -6,14 +6,26 @@
                           http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://proseo.tech/</loc>
-    <lastmod>2025-03-09T00:29:31+00:00</lastmod>
+    <lastmod>2025-03-15T11:49:31+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://proseo.tech/nl/</loc>
-    <lastmod>2025-03-09T00:29:26+00:00</lastmod>
+    <lastmod>2025-03-15T11:50:06+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://proseo.tech/shared-chat-sessions/</loc>
-    <lastmod>2025-03-12T07:07:26+00:00</lastmod>
+    <lastmod>2025-03-15T07:08:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
+      <url>
+        <loc>https://proseo.tech/feeds/sessions/</loc>
+        <lastmod>>2025-03-15T07:11:21+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

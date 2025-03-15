@@ -1,9 +1,11 @@
+import re
+import time
 import functools
 
 # Valid date parser
 def parse_date(date_str):
     try:
-        return datetime.strptime(date_str, '%Y-%m-%d')
+        return time.strptime(date_str, '%Y-%m-%d')
     except (ValueError, TypeError):
         return None
 

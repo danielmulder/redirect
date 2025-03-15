@@ -11,5 +11,6 @@ class SessionFeed(db.Model):
     target_link = db.Column(db.Text, nullable=True)
     report_title = db.Column(db.Text, nullable=False)
     summary = db.Column(db.Text, nullable=True)
-    preview_image = db.Column(db.Text, nullable=True)
-    thumbnail = db.Column(db.Text, nullable=True)
+    preview_image = db.Column(db.Text, nullable=True)   # ✅ nullable=True toegevoegd
+    thumbnail = db.Column(db.Text, nullable=True)       # ✅ nullable=True toegevoegd
+
